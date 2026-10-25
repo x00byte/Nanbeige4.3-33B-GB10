@@ -1,0 +1,2658 @@
+{
+  "label": "nvfp4-production-defaults",
+  "started": "2026-10-25T20:23:40.772174+00:00",
+  "passed": true,
+  "method": {
+    "thinking": false,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "seed": 42,
+    "generation_tokens": 128,
+    "structured_max_tokens": 384,
+    "structured_schema": {
+      "type": "object",
+      "properties": {
+        "rows": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "square": {
+                "type": "integer"
+              },
+              "tag": {
+                "type": "string",
+                "enum": [
+                  "alpha",
+                  "beta"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "square",
+              "tag"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "rows"
+      ],
+      "additionalProperties": false
+    },
+    "cache": "unique salt per request",
+    "wall_tps": "sum(server completion_tokens) / (last request end - first request start)",
+    "stream_window_tps": "sum(server completion_tokens) / (last token event - first token event); includes overlapping prefill",
+    "note": "Single pass unless repeats > 1; short prompts; not a full-context or model-quality evaluation"
+  },
+  "batches": [
+    {
+      "workload": "prose",
+      "concurrency": 1,
+      "repeat": 0,
+      "completed": "2026-10-25T20:23:50.399620+00:00",
+      "output_tokens": 128,
+      "wall_s": 9.603175088064745,
+      "wall_tps": 13.328924946821402,
+      "stream_window_s": 9.433671140810475,
+      "stream_window_tps": 13.568418708838216,
+      "median_ttft_s": 0.16944785113446414,
+      "max_ttft_s": 0.16944785113446414,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1052916.091976163,
+          "ended_monotonic": 1052925.695151251,
+          "first_event_monotonic": 1052916.261424014,
+          "last_event_monotonic": 1052925.695095155,
+          "ttft_s": 0.16944785113446414,
+          "elapsed_s": 9.603175088064745,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Framework\n\n## Introduction\n\nCoastal cities occupy a unique position in urban geography. They are economic engines, cultural hubs, and gateways to global trade and tourism, yet they face distinctive challenges. **Coastal City Number 0**\u2014a representative archetype of a modern seaside metropolis\u2014faces the dual burden of managing dense urban cores while accommodating sprawling, seasonal tourist influxes along its waterfronts. Geographic constraints, such as narrow coastal plains, historic preservation zones, and the physical reality of the sea, make standard transit planning difficult. \n\nImproving public transport",
+          "reasoning": "",
+          "event_count": 69,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-1-0-0",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 202.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 203.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 12,
+      "repeat": 0,
+      "completed": "2026-10-25T20:24:01.798816+00:00",
+      "output_tokens": 1536,
+      "wall_s": 11.383137688040733,
+      "wall_tps": 134.93643335384942,
+      "stream_window_s": 11.19583444390446,
+      "stream_window_tps": 137.19388292993835,
+      "median_ttft_s": 0.71167901402805,
+      "max_ttft_s": 0.7130798411089927,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1052925.710374783,
+          "ended_monotonic": 1052936.953243945,
+          "first_event_monotonic": 1052926.421746007,
+          "last_event_monotonic": 1052936.95310657,
+          "ttft_s": 0.7113712239079177,
+          "elapsed_s": 11.242869162000716,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities represent some of the most dynamic, economically vital, and environmentally sensitive urban landscapes in the world. **Coastal City Number 0** stands as a quintessential archetype of such a metropolis: a place where maritime commerce, seasonal tourism, residential growth, and natural ecosystems intersect. However, these same characteristics also pose severe challenges for urban mobility. Geographic constraints\u2014such as limited land area, high water tables, steep gradients, and expansive coastlines\u2014often make public transport planning uniquely complex. \n\nAs urban density increases",
+          "reasoning": "",
+          "event_count": 69,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1052925.71244775,
+          "ended_monotonic": 1052936.671538739,
+          "first_event_monotonic": 1052926.423988109,
+          "last_event_monotonic": 1052936.671418835,
+          "ttft_s": 0.7115403590723872,
+          "elapsed_s": 10.959090989083052,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where maritime commerce, tourism, and residential life intersect. Its geographic identity as a coastal city brings unique advantages\u2014harbors, scenic waterfronts, and economic vitality\u2014but also distinct logistical challenges. As urban populations swell and climate variability increases, the existing public transport infrastructure faces mounting strain. Public transportation is no longer merely a civic convenience; it is the backbone of urban resilience, economic equity, and environmental sustainability. \n\nTo build a world-class public",
+          "reasoning": "",
+          "event_count": 67,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1052925.712359014,
+          "ended_monotonic": 1052935.328351744,
+          "first_event_monotonic": 1052926.424949929,
+          "last_event_monotonic": 1052935.328246048,
+          "ttft_s": 0.7125909149181098,
+          "elapsed_s": 9.615992730017751,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant, dynamic urban center where the sea meets the land. Blessed with scenic waterfronts, thriving tourism sectors, and dense residential populations, the city faces the quintessential challenges of modern coastal urbanism: traffic congestion, environmental vulnerability, spatial constraints, and the urgent need for equitable mobility. Public transport is not merely a convenience in CCN2; it is the backbone of economic vitality, social equity, and environmental sustainability. However, as the city continues to expand, its existing public",
+          "reasoning": "",
+          "event_count": 58,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1052925.710640718,
+          "ended_monotonic": 1052936.088247119,
+          "first_event_monotonic": 1052926.421940998,
+          "last_event_monotonic": 1052936.088135776,
+          "ttft_s": 0.7113002799451351,
+          "elapsed_s": 10.377606400987133,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n---\n\n## Introduction\n\nCoastal cities occupy a unique position in urban development. Defined by their proximity to the sea, they are characterized by high tourism economies, seasonal population surges, geographic constraints, and ecological vulnerabilities. **Coastal City Number 3 (CC3)** exemplifies these conditions: a vibrant metropolitan area where residents and visitors alike face daily transit challenges. As CC3 continues to expand, congestion along arterial roads, air quality degradation, and rising travel times threaten the city\u2019s livability and economic resilience.\n\nImproving public transport",
+          "reasoning": "",
+          "event_count": 63,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1052925.71287178,
+          "ended_monotonic": 1052936.528653153,
+          "first_event_monotonic": 1052926.424528538,
+          "last_event_monotonic": 1052936.528456738,
+          "ttft_s": 0.7116567580960691,
+          "elapsed_s": 10.815781373064965,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 4: A Comprehensive Strategy\n\n---\n\n## Introduction\n\nCoastal cities occupy some of the most economically dynamic yet environmentally vulnerable regions on the planet. **Coastal City Number 4 (CCN4)** exemplifies this paradox: a thriving urban center positioned along a coastline, characterized by high population density, seasonal tourism surges, commercial port activity, and geographic constraints dictated by the sea. As CCN4 continues to expand, the existing public transport infrastructure faces mounting challenges. Congestion along arterial corridors, rising commuter frustration, low transit mode shares, and the vulnerability of transport networks to coastal",
+          "reasoning": "",
+          "event_count": 66,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 4. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-4",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1052925.710490143,
+          "ended_monotonic": 1052935.93843038,
+          "first_event_monotonic": 1052926.422216469,
+          "last_event_monotonic": 1052935.938361708,
+          "ttft_s": 0.7117263260297477,
+          "elapsed_s": 10.227940237149596,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 5: A Comprehensive Strategy\n\n---\n\n## Introduction\n\nCoastal City Number 5 stands at a critical juncture. As a vibrant coastal metropolis characterized by dense urban sprawl, seasonal tourism influxes, maritime economic activity, and vulnerable natural shorelines, the city faces unique transportation challenges. Unlike inland urban centers, a coastal city contends with geographic constraints\u2014such as limited land along the waterfront, high humidity and salt-air corrosion, seasonal population surges, and the necessity of integrating transit networks across both urban cores and peri-coastal zones. \n\nCurrently, public transport in",
+          "reasoning": "",
+          "event_count": 62,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 5. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-5",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 6,
+          "started_monotonic": 1052925.710743229,
+          "ended_monotonic": 1052935.938893178,
+          "first_event_monotonic": 1052926.42382307,
+          "last_event_monotonic": 1052935.938814538,
+          "ttft_s": 0.7130798411089927,
+          "elapsed_s": 10.22814994910732,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 6: A Comprehensive Strategy\n\n---\n\n## Introduction\n\nCoastal City Number 6 occupies a unique position in modern urban planning. Defined by its proximity to the sea, dynamic tourism economy, seasonal population surges, and geographic constraints, the city faces distinct challenges in delivering efficient, equitable, and resilient public transport. As global urbanization accelerates, the sustainability and livability of coastal cities hinge directly on their transportation infrastructure. Public transport does not merely move citizens and visitors from point A to point B; it serves as the economic backbone, environmental safeguard, and social equalizer of the municipality.",
+          "reasoning": "",
+          "event_count": 62,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 6. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-6",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 7,
+          "started_monotonic": 1052925.710869341,
+          "ended_monotonic": 1052937.093452151,
+          "first_event_monotonic": 1052926.422570611,
+          "last_event_monotonic": 1052937.093358792,
+          "ttft_s": 0.7117012699600309,
+          "elapsed_s": 11.382582810008898,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 7: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 7 stands as a vibrant, dynamic urban center situated along a major maritime corridor. Its geography\u2014defined by expansive coastlines, river deltas, historic port districts, and dense residential neighborhoods\u2014presents both extraordinary economic vitality and severe infrastructural challenges. As tourism surges, commercial activity expands, and the population swells, the strain on the city\u2019s mobility infrastructure becomes acute. Private vehicle reliance has led to worsening traffic congestion, severe carbon emissions, deteriorating road safety, and compromised coastal resilience. \n",
+          "reasoning": "",
+          "event_count": 70,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 7. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-7",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 8,
+          "started_monotonic": 1052925.710417247,
+          "ended_monotonic": 1052936.382318158,
+          "first_event_monotonic": 1052926.421592344,
+          "last_event_monotonic": 1052936.382221631,
+          "ttft_s": 0.7111750971525908,
+          "elapsed_s": 10.67190091102384,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 8: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 8 stands as a vibrant, dynamic urban center situated along a major maritime and economic corridor. Like many coastal metropolises worldwide, it faces a dual challenge: managing rapid population growth while preserving its fragile coastal environment. The city\u2019s geography\u2014characterized by dense urban centers near the shoreline, sprawling suburban developments inland, and dispersed tourism zones\u2014places immense pressure on its transportation infrastructure. Private vehicle reliance has led to severe traffic congestion, high carbon emissions, and inequitable mobility.\n\nImproving public transport in Coastal",
+          "reasoning": "",
+          "event_count": 65,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 8. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-8",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 9,
+          "started_monotonic": 1052925.710983244,
+          "ended_monotonic": 1052936.237417237,
+          "first_event_monotonic": 1052925.897524348,
+          "last_event_monotonic": 1052936.237355941,
+          "ttft_s": 0.18654110399074852,
+          "elapsed_s": 10.526433992898092,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 9: A Comprehensive Strategy\n\n---\n\n## Introduction\n\nCoastal cities occupy a unique and delicate position in global urban geography. Defined by proximity to the sea, they face a convergence of economic dynamism, ecological vulnerability, and infrastructural challenges. **Coastal City Number 9** exemplifies this archetype: a vibrant metropolis where maritime trade, tourism, and residential life intersect. However, this vibrancy is counterbalanced by severe logistical hurdles. As City Number 9 continues its rapid expansion, traffic congestion worsens, carbon emissions rise, and the existing public transport infrastructure struggles to",
+          "reasoning": "",
+          "event_count": 65,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 9. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-9",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 10,
+          "started_monotonic": 1052925.711683833,
+          "ended_monotonic": 1052936.527631493,
+          "first_event_monotonic": 1052926.424627802,
+          "last_event_monotonic": 1052936.527555046,
+          "ttft_s": 0.7129439690615982,
+          "elapsed_s": 10.81594766001217,
+          "usage": {
+            "prompt_tokens": 74,
+            "total_tokens": 202,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 10: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities are dynamic economic engines, characterized by unique geographic, environmental, and demographic challenges. **Coastal City Number 10** exemplifies this profile: it is a vibrant metropolis defined by its proximity to the sea, seasonal tourism influx, dense commercial waterfronts, and residential neighborhoods extending inland. However, this same geography that attracts residents and visitors often strains the urban transit network. Traffic congestion along narrow coastal arterial roads, environmental sensitivity around marine ecosystems, and the sheer demand of a seasonal population create a pressing need for an",
+          "reasoning": "",
+          "event_count": 66,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 10. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-10",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 11,
+          "started_monotonic": 1052925.710314463,
+          "ended_monotonic": 1052935.634724072,
+          "first_event_monotonic": 1052926.422027206,
+          "last_event_monotonic": 1052935.634591913,
+          "ttft_s": 0.7117127431556582,
+          "elapsed_s": 9.924409609055147,
+          "usage": {
+            "prompt_tokens": 74,
+            "total_tokens": 202,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 11: A Comprehensive Strategy\n\n---\n\n## Introduction\n\nCoastal City Number 11 occupies a unique position in urban planning. Defined by its proximity to the sea, seasonal tourism surges, dispersed geographic topography, and environmental sensitivities, the city faces distinct logistical challenges. Public transportation serves not merely as a civic convenience, but as the backbone of economic resilience, environmental sustainability, and social equity. As City Number 11 continues to expand, the strain on its existing transport infrastructure becomes increasingly acute. \n\nThis essay provides a detailed analysis of how public transport in Coastal",
+          "reasoning": "",
+          "event_count": 60,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 11. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-prose-12-0-11",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 203.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 215.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "code",
+      "concurrency": 1,
+      "repeat": 0,
+      "completed": "2026-10-25T20:24:08.773524+00:00",
+      "output_tokens": 128,
+      "wall_s": 6.960495084058493,
+      "wall_tps": 18.389496501930772,
+      "stream_window_s": 6.784595036879182,
+      "stream_window_tps": 18.86626973374644,
+      "median_ttft_s": 0.17580455914139748,
+      "max_ttft_s": 0.17580455914139748,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1052937.108736419,
+          "ended_monotonic": 1052944.069231503,
+          "first_event_monotonic": 1052937.284540978,
+          "last_event_monotonic": 1052944.069136015,
+          "ttft_s": 0.17580455914139748,
+          "elapsed_s": 6.960495084058493,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant0` LRU cache class in Python. It features thread-safe locking, detailed comments, and example test cases.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant0:\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache implementation.\n    \n    Key Features:\n    - Uses an OrderedDict to maintain key-value pairs and access order.\n    - Thread-safe via an RLock (re-entrant lock) to allow safe concurrent access.\n    -",
+          "reasoning": "",
+          "event_count": 44,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant0, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-1-0-0",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 215.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 216.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "code",
+      "concurrency": 12,
+      "repeat": 0,
+      "completed": "2026-10-25T20:24:18.972755+00:00",
+      "output_tokens": 1536,
+      "wall_s": 10.182238479144871,
+      "wall_tps": 150.8509158517565,
+      "stream_window_s": 9.979003929998726,
+      "stream_window_tps": 153.92317818239363,
+      "median_ttft_s": 0.6691787805175409,
+      "max_ttft_s": 0.6724934610538185,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1052944.085596166,
+          "ended_monotonic": 1052952.719944499,
+          "first_event_monotonic": 1052944.753475392,
+          "last_event_monotonic": 1052952.71974978,
+          "ttft_s": 0.6678792259190232,
+          "elapsed_s": 8.634348332881927,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant0` LRU cache class in Python. It features thread-safe locking, detailed comments, and example test cases.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Generic, Hashable, Optional, Tuple\n\n\nclass CacheVariant0(Generic[K, V]):\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache implementation.\n\n    Attributes\n    ----------\n    capacity : int\n        Maximum number of key-value pairs the cache can hold.\n    cache : OrderedDict\n        An ordered",
+          "reasoning": "",
+          "event_count": 48,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant0, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1052944.084924873,
+          "ended_monotonic": 1052953.506368124,
+          "first_event_monotonic": 1052944.753888942,
+          "last_event_monotonic": 1052953.506241965,
+          "ttft_s": 0.6689640691038221,
+          "elapsed_s": 9.421443250961602,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant1` LRU cache class in Python. It includes thread-safe locking, detailed comments, and example test cases.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Callable, Optional\n\n\nclass CacheVariant1:\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache implementation.\n\n    Behavior:\n    - Maintains up to `capacity` items.\n    - When full, evicts the least recently accessed item upon new insertion.\n    - Supports access tracking via `get()` and mutation",
+          "reasoning": "",
+          "event_count": 53,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant1, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1052944.086316003,
+          "ended_monotonic": 1052952.194132606,
+          "first_event_monotonic": 1052944.754295501,
+          "last_event_monotonic": 1052952.194027903,
+          "ttft_s": 0.6679794979281723,
+          "elapsed_s": 8.107816603034735,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete Python implementation of the `CacheVariant2` LRU cache class. It includes thread-safe locking, standard LRU eviction logic, detailed comments, and example test cases.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Generic, Optional, TypeVar\n\nK = TypeVar(\"K\")\nV = TypeVar(\"V\")\n\n\nclass CacheVariant2(Generic[K, V]):\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache variant.\n\n    Features:\n    - LRU eviction policy using an OrderedDict",
+          "reasoning": "",
+          "event_count": 45,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant2, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1052944.084988409,
+          "ended_monotonic": 1052952.891782772,
+          "first_event_monotonic": 1052944.75305941,
+          "last_event_monotonic": 1052952.891679236,
+          "ttft_s": 0.6680710010696203,
+          "elapsed_s": 8.806794363074005,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete Python implementation of the `CacheVariant3` class. It is an LRU (Least Recently Used) cache with thread-safe locking, detailed comments, and example tests.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Callable, Generic, Optional, TypeVar\n\nK = TypeVar(\"K\")\nV = TypeVar(\"V\")\n\n\nclass CacheVariant3(Generic[K, V]):\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache implementation.\n\n    Features:\n    - Thread safety via an internal",
+          "reasoning": "",
+          "event_count": 49,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant3, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1052944.085333799,
+          "ended_monotonic": 1052953.365115299,
+          "first_event_monotonic": 1052944.288017694,
+          "last_event_monotonic": 1052953.365011411,
+          "ttft_s": 0.20268389489501715,
+          "elapsed_s": 9.279781499877572,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant4` class in Python. It implements a thread-safe Least Recently Used (LRU) cache using a doubly linked list combined with a hash map for $O(1)$ average time complexity on all operations, protected by a lock for concurrent access.\n\n```python\nimport threading\nfrom typing import Any, Optional\n\n\nclass _Node:\n    \"\"\"Internal doubly-linked list node holding cache data.\"\"\"\n\n    __slots__ = (\"key\", \"value\", \"prev\", \"next\")\n\n    def __init__(self, key: Any, value",
+          "reasoning": "",
+          "event_count": 53,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant4, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-4",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1052944.088161962,
+          "ended_monotonic": 1052952.550156409,
+          "first_event_monotonic": 1052944.758247883,
+          "last_event_monotonic": 1052952.550061513,
+          "ttft_s": 0.6700859209522605,
+          "elapsed_s": 8.46199444681406,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant5` LRU cache class in Python. It includes thread-safe locking, detailed comments, and example test cases.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant5:\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache variant.\n\n    Key Features:\n    - Thread-safe using a reentrant lock (RLock) to prevent race conditions\n      in multi-threaded environments.\n    - Preserves access order using an OrderedDict.\n    - Ev",
+          "reasoning": "",
+          "event_count": 47,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant5, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-5",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 6,
+          "started_monotonic": 1052944.086188339,
+          "ended_monotonic": 1052953.057298433,
+          "first_event_monotonic": 1052944.757101888,
+          "last_event_monotonic": 1052953.057147905,
+          "ttft_s": 0.6709135491400957,
+          "elapsed_s": 8.971110094105825,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant6` class in Python. It implements an **LRU (Least Recently Used) Cache** using `collections.OrderedDict` for $O(1)$ key operations, protected by a reentrant lock (`threading.RLock`) for thread safety.\n\n```python\n\"\"\"\nCacheVariant6: A thread-safe Least Recently Used (LRU) Cache implementation.\n\nFeatures:\n- O(1) time complexity for get, put, and eviction operations.\n- Thread-safe using a reentrant lock (RLock).\n- Detailed comments explaining internal mechanisms",
+          "reasoning": "",
+          "event_count": 50,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant6, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-6",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 7,
+          "started_monotonic": 1052944.086878976,
+          "ended_monotonic": 1052952.373885468,
+          "first_event_monotonic": 1052944.757349727,
+          "last_event_monotonic": 1052952.373760636,
+          "ttft_s": 0.6704707508906722,
+          "elapsed_s": 8.287006492028013,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant7` class in Python. It features thread-safe locking, an $O(1)$ Least Recently Used (LRU) eviction policy using a doubly linked list and hash map, detailed comments, and example tests.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant7:\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache variant.\n\n    Attributes:\n        capacity (int): Maximum number of items the cache can hold.\n        lock (threading.RLock",
+          "reasoning": "",
+          "event_count": 46,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant7, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-7",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 8,
+          "started_monotonic": 1052944.085386359,
+          "ended_monotonic": 1052952.549710923,
+          "first_event_monotonic": 1052944.75787982,
+          "last_event_monotonic": 1052952.549565147,
+          "ttft_s": 0.6724934610538185,
+          "elapsed_s": 8.464324564207345,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete Python implementation of the `CacheVariant8` class. It is an LRU (Least Recently Used) cache with thread-safe locking, detailed comments, and comprehensive example tests.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant8:\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache variant.\n\n    Maintains a maximum capacity of items. When the cache exceeds its capacity,\n    the least recently accessed item is evicted. Thread safety is guaranteed\n    using a reentrant lock (RL",
+          "reasoning": "",
+          "event_count": 47,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant8, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-8",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 9,
+          "started_monotonic": 1052944.085266519,
+          "ended_monotonic": 1052952.891238422,
+          "first_event_monotonic": 1052944.752879779,
+          "last_event_monotonic": 1052952.891161047,
+          "ttft_s": 0.6676132599823177,
+          "elapsed_s": 8.805971902795136,
+          "usage": {
+            "prompt_tokens": 62,
+            "total_tokens": 190,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant9` LRU cache class in Python. It includes thread-safe locking, detailed comments, and example test cases.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Callable, Optional\n\n\nclass CacheVariant9:\n    \"\"\"\n    A thread-safe Least Recently Used (LRU) Cache variant.\n\n    Features:\n    - Thread-safe via an RLock (re-entrant lock).\n    - Preserves insertion/access order using an OrderedDict.\n    - Configurable maximum capacity.\n    - Optional",
+          "reasoning": "",
+          "event_count": 49,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant9, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-9",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 10,
+          "started_monotonic": 1052944.087347198,
+          "ended_monotonic": 1052953.947926121,
+          "first_event_monotonic": 1052944.75674069,
+          "last_event_monotonic": 1052953.947817897,
+          "ttft_s": 0.6693934919312596,
+          "elapsed_s": 9.860578923020512,
+          "usage": {
+            "prompt_tokens": 63,
+            "total_tokens": 191,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete implementation of the `CacheVariant10` LRU cache class in Python. It includes thread-safe locking, an `OrderedDict`-based doubly-linked list mechanism, detailed comments, and comprehensive example tests.\n\n```python\nimport threading\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant10:\n    \"\"\"\n    Thread-safe Least Recently Used (LRU) Cache variant.\n\n    This cache maintains items up to a specified capacity. When the cache\n    reaches capacity and a new item is inserted, the least recently used item\n    ",
+          "reasoning": "",
+          "event_count": 56,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant10, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-10",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 11,
+          "started_monotonic": 1052944.084847017,
+          "ended_monotonic": 1052954.267085496,
+          "first_event_monotonic": 1052944.754671899,
+          "last_event_monotonic": 1052954.267021624,
+          "ttft_s": 0.6698248819448054,
+          "elapsed_s": 10.182238479144871,
+          "usage": {
+            "prompt_tokens": 63,
+            "total_tokens": 191,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "Here is the complete Python implementation of the `CacheVariant11` LRU cache class. It features thread-safe locking, standard LRU eviction logic using an `OrderedDict`, and comprehensive tests.\n\n```python\n\"\"\"\nLRU Cache Variant 11 Implementation\n====================================\nThis module provides a thread-safe Least Recently Used (LRU) cache\nimplementation named CacheVariant11, along with detailed comments\nand example test cases.\n\"\"\"\n\nfrom collections import OrderedDict\nfrom typing import Any, Optional, Tuple\nimport threading\nimport time\n\n\nclass CacheVariant11:\n    \"\"\"",
+          "reasoning": "",
+          "event_count": 58,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Implement a Python LRU cache class named CacheVariant11, with locking, detailed comments and example tests. Return the complete Python code."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-code-12-0-11",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 216.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 228.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "structured",
+      "concurrency": 1,
+      "repeat": 0,
+      "completed": "2026-10-25T20:24:26.343671+00:00",
+      "output_tokens": 195,
+      "wall_s": 7.3161433399654925,
+      "wall_tps": 26.6533870290354,
+      "stream_window_s": 7.122602955903858,
+      "stream_window_tps": 27.37763163372266,
+      "median_ttft_s": 0.1934407849330455,
+      "max_ttft_s": 0.1934407849330455,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1052954.283796861,
+          "ended_monotonic": 1052961.599940201,
+          "first_event_monotonic": 1052954.477237646,
+          "last_event_monotonic": 1052961.599840602,
+          "ttft_s": 0.1934407849330455,
+          "elapsed_s": 7.3161433399654925,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 0."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-1-0-0",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 228.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 229.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "structured",
+      "concurrency": 12,
+      "repeat": 0,
+      "completed": "2026-10-25T20:24:35.316811+00:00",
+      "output_tokens": 2340,
+      "wall_s": 8.952231302158907,
+      "wall_tps": 261.387348139194,
+      "stream_window_s": 8.72207535407506,
+      "stream_window_tps": 268.2847722597035,
+      "median_ttft_s": 0.7411783715942875,
+      "max_ttft_s": 0.7426877568941563,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1052961.658034694,
+          "ended_monotonic": 1052970.596639817,
+          "first_event_monotonic": 1052962.399464152,
+          "last_event_monotonic": 1052970.596563465,
+          "ttft_s": 0.7414294581394643,
+          "elapsed_s": 8.938605123199522,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 0."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-0",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1052961.658842018,
+          "ended_monotonic": 1052970.606391645,
+          "first_event_monotonic": 1052962.399688871,
+          "last_event_monotonic": 1052970.604345926,
+          "ttft_s": 0.7408468530047685,
+          "elapsed_s": 8.947549626929685,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 1."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-1",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1052961.659231761,
+          "ended_monotonic": 1052970.607461865,
+          "first_event_monotonic": 1052962.400516099,
+          "last_event_monotonic": 1052970.607309257,
+          "ttft_s": 0.7412843380589038,
+          "elapsed_s": 8.948230104055256,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 2."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-2",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1052961.658308341,
+          "ended_monotonic": 1052970.599512876,
+          "first_event_monotonic": 1052962.400208053,
+          "last_event_monotonic": 1052970.598675312,
+          "ttft_s": 0.7418997120112181,
+          "elapsed_s": 8.941204535076395,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 3."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-3",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1052961.658992738,
+          "ended_monotonic": 1052970.601585683,
+          "first_event_monotonic": 1052962.401022481,
+          "last_event_monotonic": 1052970.601531235,
+          "ttft_s": 0.7420297430362552,
+          "elapsed_s": 8.942592944949865,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 4."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-4",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1052961.658229205,
+          "ended_monotonic": 1052970.59872336,
+          "first_event_monotonic": 1052962.400916962,
+          "last_event_monotonic": 1052970.598604448,
+          "ttft_s": 0.7426877568941563,
+          "elapsed_s": 8.940494155045599,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 5."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-5",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 6,
+          "started_monotonic": 1052961.659148305,
+          "ended_monotonic": 1052970.604534054,
+          "first_event_monotonic": 1052962.400356484,
+          "last_event_monotonic": 1052970.604439702,
+          "ttft_s": 0.7412081791553646,
+          "elapsed_s": 8.945385748986155,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 6."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-6",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 7,
+          "started_monotonic": 1052961.659298016,
+          "ended_monotonic": 1052970.602469567,
+          "first_event_monotonic": 1052962.399798663,
+          "last_event_monotonic": 1052970.601449699,
+          "ttft_s": 0.7405006471090019,
+          "elapsed_s": 8.943171550985426,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 7."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-7",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 8,
+          "started_monotonic": 1052961.658109414,
+          "ended_monotonic": 1052970.398323694,
+          "first_event_monotonic": 1052961.886228619,
+          "last_event_monotonic": 1052970.398222063,
+          "ttft_s": 0.22811920498497784,
+          "elapsed_s": 8.740214280085638,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 8."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-8",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 9,
+          "started_monotonic": 1052961.660051405,
+          "ended_monotonic": 1052970.61018774,
+          "first_event_monotonic": 1052962.400800674,
+          "last_event_monotonic": 1052970.608303973,
+          "ttft_s": 0.7407492690254003,
+          "elapsed_s": 8.950136335100979,
+          "usage": {
+            "prompt_tokens": 68,
+            "total_tokens": 263,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 9."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-9",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 10,
+          "started_monotonic": 1052961.659872958,
+          "ended_monotonic": 1052970.608395716,
+          "first_event_monotonic": 1052962.40044978,
+          "last_event_monotonic": 1052970.607378473,
+          "ttft_s": 0.7405768220778555,
+          "elapsed_s": 8.94852275797166,
+          "usage": {
+            "prompt_tokens": 69,
+            "total_tokens": 264,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 10."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-10",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        },
+        {
+          "index": 11,
+          "started_monotonic": 1052961.657956438,
+          "ended_monotonic": 1052970.59544467,
+          "first_event_monotonic": 1052962.399105002,
+          "last_event_monotonic": 1052970.595332911,
+          "ttft_s": 0.7411485640332103,
+          "elapsed_s": 8.937488232040778,
+          "usage": {
+            "prompt_tokens": 69,
+            "total_tokens": 264,
+            "completion_tokens": 195,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "stop",
+          "structured_semantics_passed": true,
+          "content": "{\n  \"rows\": [\n    {\n      \"id\": 0,\n      \"square\": 0,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 1,\n      \"square\": 1,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 2,\n      \"square\": 4,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 3,\n      \"square\": 9,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 4,\n      \"square\": 16,\n      \"tag\": \"alpha\"\n    },\n    {\n      \"id\": 5,\n      \"square\": 25,\n      \"tag\": \"alpha\"\n    }\n  ]\n}",
+          "reasoning": "",
+          "event_count": 41,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Return a JSON object containing six rows with id 0 through 5, square equal to id times id, and tag alpha. This is dataset variant 11."
+              }
+            ],
+            "max_tokens": 384,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-4f4b941ce1de4088aafac596b2c8b8fa-structured-12-0-11",
+            "response_format": {
+              "type": "json_schema",
+              "json_schema": {
+                "name": "rows",
+                "strict": true,
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "rows": {
+                      "type": "array",
+                      "minItems": 6,
+                      "maxItems": 6,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "square": {
+                            "type": "integer"
+                          },
+                          "tag": {
+                            "type": "string",
+                            "enum": [
+                              "alpha",
+                              "beta"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "id",
+                          "square",
+                          "tag"
+                        ],
+                        "additionalProperties": false
+                      }
+                    }
+                  },
+                  "required": [
+                    "rows"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            }
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 229.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 241.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    }
+  ],
+  "completed": "2026-10-25T20:24:35.326948+00:00"
+}

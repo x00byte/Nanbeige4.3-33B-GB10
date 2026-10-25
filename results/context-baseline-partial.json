@@ -1,0 +1,21 @@
+{
+  "passed": false,
+  "note": "Probe cold context capacity; this does not measure long-context accuracy.",
+  "cases": [
+    {
+      "requested_prompt_tokens": 16384,
+      "content": "READY",
+      "usage": {
+        "prompt_tokens": 16384,
+        "total_tokens": 16386,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ttft_s": 38.61525527201593,
+      "elapsed_s": 38.8943047010107,
+      "passed": true
+    }
+  ]
+}

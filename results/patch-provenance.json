@@ -1,0 +1,16 @@
+{
+  "base_image": "eugr/spark-vllm-b12x@sha256:03a956544e9f9b4b7ba91690469fbe7848bdbef29a7d2e0f5788368467bb3595",
+  "runtime_recipe": "flash-prefill-v3",
+  "measured_head_image_id": "sha256:d23e0d8d7ef9354de2f0be38a62c1b2f2a63ab21f867836bce87877a69385e99",
+  "original_int4_source_sha256": "d91968f280cd8eaed7570ab255f0276b40e833e18a25066d371d9ca8149425f2",
+  "files": {
+    "Dockerfile": "e1f90b2d8da7df2cf621ef6fe2ba88dba875686478044d66f9a037ab988a9312",
+    ".dockerignore": "1cafbfd266f5e4e39832ee9aeb62eeddd09370511b421802578cccd1cf33b67b",
+    "patches/apply.py": "aee46c551e344be3a875f944d6b30681b9cc78b7b3e51a5c2f4519e490e38d97",
+    "patches/flash_prefill.py": "7dd0041880d75bba399471df400ee046db53f907de96e734dd07e2055ca6e7e8"
+  },
+  "worker_microbenchmark": "prefill-flash-worker.json",
+  "worker_full_context": "context-capacity-worker.json",
+  "head_context": "context-capacity-head.json",
+  "all_serving_measurements_single_gpu": true
+}

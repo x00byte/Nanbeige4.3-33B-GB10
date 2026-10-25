@@ -1,0 +1,8 @@
+{
+  "vllm": "0.1.dev21830+g8244d1c44.d20261015",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.19.0",
+  "compressed-tensors": "0.17.0",
+  "triton": "3.7.1",
+  "flashinfer-python": "0.7.1"
+}

@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "portable engine arguments match the live final image",
+      "passed": true
+    },
+    {
+      "check": "Port is occupied guard",
+      "passed": true
+    },
+    {
+      "check": "GPU is occupied guard",
+      "passed": true
+    },
+    {
+      "check": "dashboard exposes final quantized-draft launcher",
+      "passed": true
+    }
+  ]
+}

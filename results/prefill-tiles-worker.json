@@ -1,0 +1,363 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "query_heads": 56,
+      "kv_heads": 8,
+      "query_lengths": [
+        1
+      ],
+      "kv_lengths": [
+        8192
+      ],
+      "window": [
+        -1,
+        -1
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 0.4366399943828583,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 0.430400013923645,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 0.4294399917125702,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 0.42902401089668274,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 56,
+      "kv_heads": 8,
+      "query_lengths": [
+        4
+      ],
+      "kv_lengths": [
+        8192
+      ],
+      "window": [
+        -1,
+        -1
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 0.42895999550819397,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 0.42841601371765137,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 0.4286719858646393,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 0.4281280040740967,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 56,
+      "kv_heads": 8,
+      "query_lengths": [
+        257
+      ],
+      "kv_lengths": [
+        8192
+      ],
+      "window": [
+        -1,
+        -1
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 4.2969279289245605,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 4.225312232971191,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 3.486783981323242,
+          "max_abs_error": 0.00048828125,
+          "mean_abs_error": 1.1357527540667434e-07,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 6.339903831481934,
+          "max_abs_error": 0.00048828125,
+          "mean_abs_error": 1.1357527540667434e-07,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 56,
+      "kv_heads": 8,
+      "query_lengths": [
+        4096
+      ],
+      "kv_lengths": [
+        16384
+      ],
+      "window": [
+        -1,
+        -1
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 114.54793548583984,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 109.993408203125,
+          "max_abs_error": 0.0001220703125,
+          "mean_abs_error": 1.7670183025120245e-11,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 80.52540588378906,
+          "max_abs_error": 0.00048828125,
+          "mean_abs_error": 8.381019966918757e-08,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 136.82818603515625,
+          "max_abs_error": 0.00048828125,
+          "mean_abs_error": 8.381019966918757e-08,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 56,
+      "kv_heads": 8,
+      "query_lengths": [
+        4096
+      ],
+      "kv_lengths": [
+        65536
+      ],
+      "window": [
+        -1,
+        -1
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 467.19451904296875,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 444.52752685546875,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 310.6139221191406,
+          "max_abs_error": 0.000244140625,
+          "mean_abs_error": 5.4036490837461315e-08,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 587.9752197265625,
+          "max_abs_error": 0.000244140625,
+          "mean_abs_error": 5.4036490837461315e-08,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 20,
+      "kv_heads": 4,
+      "query_lengths": [
+        257
+      ],
+      "kv_lengths": [
+        8192
+      ],
+      "window": [
+        8191,
+        0
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 2.3072640895843506,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 1.808608055114746,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 2.1005120277404785,
+          "max_abs_error": 0.000244140625,
+          "mean_abs_error": 8.841259102609911e-08,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 1.807744026184082,
+          "max_abs_error": 0.000244140625,
+          "mean_abs_error": 8.841259102609911e-08,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 20,
+      "kv_heads": 4,
+      "query_lengths": [
+        4096
+      ],
+      "kv_lengths": [
+        16384
+      ],
+      "window": [
+        8191,
+        0
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 34.437984466552734,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 28.343551635742188,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 32.510623931884766,
+          "max_abs_error": 0.00048828125,
+          "mean_abs_error": 1.0083274304406586e-07,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 27.122432708740234,
+          "max_abs_error": 0.00048828125,
+          "mean_abs_error": 1.0109359038779075e-07,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "query_heads": 56,
+      "kv_heads": 8,
+      "query_lengths": [
+        63,
+        129,
+        257
+      ],
+      "kv_lengths": [
+        257,
+        2048,
+        8192
+      ],
+      "window": [
+        -1,
+        -1
+      ],
+      "tiles": [
+        {
+          "tile": 16,
+          "median_ms": 5.112800121307373,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 32,
+          "median_ms": 5.0696001052856445,
+          "max_abs_error": 0.0,
+          "mean_abs_error": 0.0,
+          "passed": true
+        },
+        {
+          "tile": 64,
+          "median_ms": 4.0726399421691895,
+          "max_abs_error": 0.001953125,
+          "mean_abs_error": 1.7704826404951746e-07,
+          "passed": true
+        },
+        {
+          "tile": 128,
+          "median_ms": 7.191199779510498,
+          "max_abs_error": 0.001953125,
+          "mean_abs_error": 1.7704826404951746e-07,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "torch": "2.13.0+cu130",
+  "gpu": "NVIDIA GB10"
+}

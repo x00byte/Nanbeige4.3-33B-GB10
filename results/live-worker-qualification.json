@@ -1,0 +1,708 @@
+{
+  "started": "2026-10-25T19:56:05.827469+00:00",
+  "passed": true,
+  "model": "Nanbeige4.3-33B",
+  "quantization": "NVFP4",
+  "functional": [
+    {
+      "content": "33",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 52,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.0554983590263873,
+      "ttft_s": 0.9717095540836453,
+      "content_events": 2,
+      "case": 0,
+      "expected": "33",
+      "passed": true
+    },
+    {
+      "content": "48",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 52,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.2036823299713433,
+      "ttft_s": 2.0560448048636317,
+      "content_events": 2,
+      "case": 1,
+      "expected": "48",
+      "passed": true
+    },
+    {
+      "content": "65",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 52,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.204915797105059,
+      "ttft_s": 2.0577809570822865,
+      "content_events": 2,
+      "case": 2,
+      "expected": "65",
+      "passed": true
+    },
+    {
+      "content": "84",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 52,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.203901674132794,
+      "ttft_s": 2.057228383142501,
+      "content_events": 2,
+      "case": 3,
+      "expected": "84",
+      "passed": true
+    },
+    {
+      "content": "105",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 53,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.348469854099676,
+      "ttft_s": 2.0553946800064296,
+      "content_events": 3,
+      "case": 4,
+      "expected": "105",
+      "passed": true
+    },
+    {
+      "content": "128",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 53,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.348448286065832,
+      "ttft_s": 2.057385678170249,
+      "content_events": 3,
+      "case": 5,
+      "expected": "128",
+      "passed": true
+    },
+    {
+      "content": "153",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 49,
+        "total_tokens": 53,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.348460157867521,
+      "ttft_s": 2.0578142998274416,
+      "content_events": 3,
+      "case": 6,
+      "expected": "153",
+      "passed": true
+    },
+    {
+      "content": "180",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 50,
+        "total_tokens": 54,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.3484223019331694,
+      "ttft_s": 2.0576294530183077,
+      "content_events": 2,
+      "case": 7,
+      "expected": "180",
+      "passed": true
+    },
+    {
+      "content": "209",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 50,
+        "total_tokens": 54,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.348482365021482,
+      "ttft_s": 2.05770222004503,
+      "content_events": 2,
+      "case": 8,
+      "expected": "209",
+      "passed": true
+    },
+    {
+      "content": "240",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 50,
+        "total_tokens": 54,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.348519773920998,
+      "ttft_s": 2.05772402882576,
+      "content_events": 3,
+      "case": 9,
+      "expected": "240",
+      "passed": true
+    },
+    {
+      "content": "273",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 50,
+        "total_tokens": 54,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.348873628070578,
+      "ttft_s": 2.0582915139384568,
+      "content_events": 3,
+      "case": 10,
+      "expected": "273",
+      "passed": true
+    },
+    {
+      "content": "308",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 50,
+        "total_tokens": 54,
+        "completion_tokens": 4,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.2037929699290544,
+      "ttft_s": 2.0577743488829583,
+      "content_events": 2,
+      "case": 11,
+      "expected": "308",
+      "passed": true
+    }
+  ],
+  "decode": [
+    {
+      "concurrency": 1,
+      "elapsed_s": 5.566843611886725,
+      "completion_tokens": 96,
+      "wall_tps": 17.244960823942296,
+      "rows": [
+        {
+          "content": "Here is the complete implementation of the `CacheVariant0` LRU (Least Recently Used) cache class in Python, written with detailed comments and comprehensive tests.\n\n### Implementation\n\n```python\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant0:\n    \"\"\"\n    A Least Recently Used (LRU) Cache implementation.\n\n    An LRU cache retains recently accessed items and evicts the least recently\n    used",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 32
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 5.566233599791303,
+          "ttft_s": 0.15829205187037587,
+          "content_events": 36
+        }
+      ]
+    },
+    {
+      "concurrency": 12,
+      "elapsed_s": 8.120221690973267,
+      "completion_tokens": 1152,
+      "wall_tps": 141.86804792295325,
+      "rows": [
+        {
+          "content": "Here is the complete implementation of the `CacheVariant0` LRU (Least Recently Used) cache class in Python, written with detailed comments and comprehensive tests.\n\n### Implementation\n\n```python\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant0:\n    \"\"\"\n    A Least Recently Used (LRU) Cache implementation.\n\n    An LRU cache retains recently accessed items and evicts the least recently\n    used",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 6.511328345164657,
+          "ttft_s": 0.4476190081331879,
+          "content_events": 42
+        },
+        {
+          "content": "Here is the complete implementation of the `CacheVariant1` LRU (Least Recently Used) cache class in Python, including detailed comments and comprehensive tests.\n\n### Implementation\n\n```python\nfrom collections import OrderedDict\nfrom typing import Any, Dict, Optional\n\n\nclass CacheVariant1:\n    \"\"\"\n    A Least Recently Used (LRU) Cache implementation.\n\n    Maintains a fixed capacity. When the cache reaches capacity and a new item\n",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 6.963881761999801,
+          "ttft_s": 0.17831326718442142,
+          "content_events": 46
+        },
+        {
+          "content": "Here is the complete implementation of the `CacheVariant2` LRU (Least Recently Used) cache class in Python, written with detailed comments and comprehensive test cases.\n\n### Implementation Details\n* **Data Structure**: Combines a doubly linked list (`collections.OrderedDict` or custom nodes) with a hash map (`dict`) to achieve $O(1)$ time complexity for insertions, lookups, and evictions. Here, we use `collections.OrderedDict`",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.260362316854298,
+          "ttft_s": 0.4471162259578705,
+          "content_events": 47
+        },
+        {
+          "content": "Here is the complete implementation of the **`CacheVariant3`** LRU (Least Recently Used) Cache class in Python, fully commented and accompanied by comprehensive tests.\n\n### Design Overview\n* **Data Structure**: Combines an **`OrderedDict`** (or doubly linked list + hash map) to achieve $O(1)$ time complexity for insertions, lookups, and evictions.\n* **Features**:\n  * Configurable `capacity`.\n",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.547291188966483,
+          "ttft_s": 0.44777174293994904,
+          "content_events": 49
+        },
+        {
+          "content": "Here is the complete implementation of the **`CacheVariant4`** LRU (Least Recently Used) Cache class in Python, written with detailed comments and comprehensive test cases.\n\nThis implementation uses a combination of a **hash map** (dictionary) and a **doubly linked list** to achieve $O(1)$ time complexity for all core operations (`get`, `put`, and eviction).\n\n---\n\n### Python Implementation\n\n```python\nfrom typing",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.1103215999901295,
+          "ttft_s": 0.4464265808928758,
+          "content_events": 46
+        },
+        {
+          "content": "Here is the complete implementation of the `CacheVariant5` LRU (Least Recently Used) cache class in Python, fully commented and accompanied by comprehensive tests.\n\n### Implementation\n\n```python\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant5:\n    \"\"\"\n    A Least Recently Used (LRU) Cache implementation using Python's OrderedDict.\n\n    An LRU cache evicts the least recently accessed item when",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 6.811207649996504,
+          "ttft_s": 0.4458569041453302,
+          "content_events": 44
+        },
+        {
+          "content": "Here is the complete implementation of the `CacheVariant6` LRU (Least Recently Used) cache class in Python, written with detailed comments and comprehensive test cases.\n\n### Implementation\n\n```python\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant6:\n    \"\"\"\n    A Least Recently Used (LRU) Cache implementation (Variant 6).\n    \n    This implementation uses an `OrderedDict` to maintain key",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 6.811334929894656,
+          "ttft_s": 0.4457774329930544,
+          "content_events": 44
+        },
+        {
+          "content": "Here is the complete implementation of the **`CacheVariant7`** LRU (Least Recently Used) Cache class in Python, written with detailed comments and comprehensive test cases.\n\n### Implementation Details\n* **Data Structure**: Uses an **`OrderedDict`** (or doubly linked list + hash map). Here we use `collections.OrderedDict`, which combines a hash map and a doubly linked list internally, providing $O(1)$ time complexity for insertions, look",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.97617605002597,
+          "ttft_s": 0.4457102969754487,
+          "content_events": 52
+        },
+        {
+          "content": "Here is the complete implementation of the **`CacheVariant8`** LRU (Least Recently Used) Cache class in Python, fully commented, along with a comprehensive test suite.\n\n### Implementation Details\n* **Data Structure**: Uses an **`OrderedDict`** (or a doubly linked list + hash map). `OrderedDict` provides $O(1)$ operations for insertion, access, and eviction while maintaining access order.\n* **Complexity**:\n  ",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 8.11541232210584,
+          "ttft_s": 0.4456423611845821,
+          "content_events": 53
+        },
+        {
+          "content": "Here is the complete Python implementation of the `CacheVariant9` LRU (Least Recently Used) cache class, fully commented, along with comprehensive tests.\n\n### Implementation Details\n* **Data Structure**: Combines a doubly linked list (`Node`) and a hash map (`dict`) to achieve $O(1)$ time complexity for insertions, lookups, and evictions.\n* **Thread Safety**: Uses `threading.Lock` to make operations safe in concurrent environments",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 57,
+            "total_tokens": 153,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.831547098932788,
+          "ttft_s": 0.44471777393482625,
+          "content_events": 51
+        },
+        {
+          "content": "Here is the complete implementation of the `CacheVariant10` LRU (Least Recently Used) cache class in Python, complete with detailed comments and comprehensive tests.\n\n### Implementation\n\n```python\nfrom collections import OrderedDict\nfrom typing import Any, Optional\n\n\nclass CacheVariant10:\n    \"\"\"\n    A Least Recently Used (LRU) Cache implementation.\n\n    Maintains items up to a specified maximum capacity. When the cache\n    ",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 58,
+            "total_tokens": 154,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.257971432060003,
+          "ttft_s": 0.4448546681087464,
+          "content_events": 47
+        },
+        {
+          "content": "Here is the complete implementation of the **`CacheVariant11`** LRU (Least Recently Used) Cache class in Python, complete with detailed comments and a comprehensive test suite.\n\n### Implementation Details\n- **Data Structure**: Uses an `OrderedDict` (or a doubly linked list + hash map). Here, `collections.OrderedDict` is used because it provides $O(1)$ key access, insertion, and deletion while maintaining access order.\n-",
+          "reasoning": "",
+          "tools": [],
+          "usage": {
+            "prompt_tokens": 58,
+            "total_tokens": 154,
+            "completion_tokens": 96,
+            "prompt_tokens_details": {
+              "cached_tokens": 32,
+              "created_cache_tokens": 0
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "elapsed_s": 7.97493069502525,
+          "ttft_s": 0.4447569251060486,
+          "content_events": 52
+        }
+      ]
+    }
+  ],
+  "runtime_recipe": "flash-prefill-v3",
+  "draft_window_enabled": true,
+  "aliases": [
+    "Nanbeige4.3-33B",
+    "Nanbeige/Nanbeige4.3-33B",
+    "primitive-ai/Nanbeige4.3-33B-NVFP4",
+    "nanbeige43-33b-nvfp4-head"
+  ],
+  "tool_call": {
+    "content": "",
+    "reasoning": "",
+    "tools": [
+      {
+        "name": "weather",
+        "arguments": "{\"city\": \"Paris\"}"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 300,
+      "total_tokens": 326,
+      "completion_tokens": 26,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 288
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "tool_calls",
+    "elapsed_s": 1.9324933718889952,
+    "ttft_s": null,
+    "content_events": 0
+  },
+  "structured": {
+    "content": "{\n  \"answer\": 42\n}",
+    "reasoning": "",
+    "tools": [],
+    "usage": {
+      "prompt_tokens": 46,
+      "total_tokens": 58,
+      "completion_tokens": 12,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 32
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "elapsed_s": 1.0869616228155792,
+    "ttft_s": 0.5680324358399957,
+    "content_events": 4
+  },
+  "reasoning": {
+    "content": "\n\n24",
+    "reasoning": "We need answer simple arithmetic. Need final concise. Compute 11+13=24.\n",
+    "tools": [],
+    "usage": {
+      "prompt_tokens": 49,
+      "total_tokens": 77,
+      "completion_tokens": 28,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 32
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 22
+      }
+    },
+    "finish_reason": "stop",
+    "elapsed_s": 2.763877645134926,
+    "ttft_s": 0.19332428113557398,
+    "content_events": 19
+  },
+  "prefill": {
+    "cold": {
+      "content": "READY",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 3114,
+        "total_tokens": 3116,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 3104
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 2.4787822461221367,
+      "ttft_s": 2.3078141601290554,
+      "content_events": 1
+    },
+    "warm": {
+      "content": "READY",
+      "reasoning": "",
+      "tools": [],
+      "usage": {
+        "prompt_tokens": 3137,
+        "total_tokens": 3139,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 3104,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "finish_reason": "stop",
+      "elapsed_s": 0.36963258194737136,
+      "ttft_s": 0.2026239491533488,
+      "content_events": 1
+    }
+  },
+  "completed": "2026-10-25T19:56:30.522403+00:00"
+}

@@ -1,0 +1,67 @@
+{
+  "repo": "kaitchup/Nanbeige4.1-3B-NVFP4",
+  "revision": "e1233cbc1618c6c5d354b4e2b47949740d2a2c31",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1570,
+      "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930"
+    },
+    {
+      "path": "README.md",
+      "bytes": 932,
+      "sha256": "e1cd062127e2a59a8ed5cb42eba8595847b208025d4acfec940172990e546562"
+    },
+    {
+      "path": "added_tokens.json",
+      "bytes": 174,
+      "sha256": "9e3b127a27647df2c353cc1e5500826f7cdbe8bd15a458e368bba8422e9719cf"
+    },
+    {
+      "path": "chat_template.jinja",
+      "bytes": 5527,
+      "sha256": "757f108242fb797d23b79f72c088cb5b4bc37fb3744e29dc8771c1dc2b1cb335"
+    },
+    {
+      "path": "config.json",
+      "bytes": 2131,
+      "sha256": "d3543ef39a47b33adac236e8245efe8bbabbe2dacf9d43e77732ac17ad0129eb"
+    },
+    {
+      "path": "generation_config.json",
+      "bytes": 142,
+      "sha256": "d5517fe34e62772479243ef5094220c5c649cec84cd1e7b32a46ab17dd110146"
+    },
+    {
+      "path": "recipe.yaml",
+      "bytes": 130,
+      "sha256": "bfb14c100bba79ee235052468dd6639a38dae6559c6063cd433515abbaef8a3c"
+    },
+    {
+      "path": "special_tokens_map.json",
+      "bytes": 623,
+      "sha256": "b718fce2b7a8940ffeddc1e67f3b092cc0d13ac885c63a021528786f8c4cf6c0"
+    },
+    {
+      "path": "tokenizer.json",
+      "bytes": 18451221,
+      "sha256": "c19684f77ffbbe626fa5c77d4fac1d8069fe5770e1e6576d38f9e2813f2a43a7"
+    },
+    {
+      "path": "tokenizer.model",
+      "bytes": 2782298,
+      "sha256": "fb41d04798b714520a9b075727b0226538b7330254299062742c50ec8374bc36"
+    },
+    {
+      "path": "tokenizer_config.json",
+      "bytes": 2305,
+      "sha256": "fcbd80d051fd692c8e4e64c62c8c252004983894a6b0f83280aae0a90a8acc43"
+    },
+    {
+      "path": "model.safetensors",
+      "bytes": 3435842064,
+      "sha256": "a0fbe1162c346973d997ee8150cde43094f283a17317158b3433a2138813d8aa"
+    }
+  ],
+  "bytes": 3457089117
+}

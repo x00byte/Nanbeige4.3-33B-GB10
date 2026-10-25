@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "hardware": "one NVIDIA GB10",
+  "runtime_recipe": "flash-prefill-v3",
+  "draft_window_tokens": 8192,
+  "draft_window_layers": 32,
+  "context": 262144,
+  "parallel": 12,
+  "target_cache_tokens": 1073952,
+  "served_model_names": [
+    "Nanbeige4.3-33B",
+    "Nanbeige/Nanbeige4.3-33B",
+    "primitive-ai/Nanbeige4.3-33B-NVFP4",
+    "nanbeige43-33b-nvfp4-head"
+  ],
+  "health_check": true,
+  "worker_full_context_passed": true
+}

@@ -1,0 +1,2596 @@
+{
+  "label": "nvfp4-int4kv-isolated-prose",
+  "started": "2026-10-25T16:56:27.053757+00:00",
+  "passed": true,
+  "method": {
+    "thinking": false,
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 42,
+    "generation_tokens": 128,
+    "structured_max_tokens": 384,
+    "structured_schema": {
+      "type": "object",
+      "properties": {
+        "rows": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "square": {
+                "type": "integer"
+              },
+              "tag": {
+                "type": "string",
+                "enum": [
+                  "alpha",
+                  "beta"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "square",
+              "tag"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "rows"
+      ],
+      "additionalProperties": false
+    },
+    "cache": "unique salt per request",
+    "wall_tps": "sum(server completion_tokens) / (last request end - first request start)",
+    "stream_window_tps": "sum(server completion_tokens) / (last token event - first token event); includes overlapping prefill",
+    "note": "Single pass unless repeats > 1; short prompts; not a full-context or model-quality evaluation"
+  },
+  "batches": [
+    {
+      "workload": "prose",
+      "concurrency": 1,
+      "repeat": 0,
+      "completed": "2026-10-25T16:56:39.018131+00:00",
+      "output_tokens": 128,
+      "wall_s": 11.940323182032444,
+      "wall_tps": 10.71997784721705,
+      "stream_window_s": 11.802490772097372,
+      "stream_window_tps": 10.845168403148318,
+      "median_ttft_s": 0.13777652196586132,
+      "max_ttft_s": 0.13777652196586132,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040482.373495808,
+          "ended_monotonic": 1040494.31381899,
+          "first_event_monotonic": 1040482.51127233,
+          "last_event_monotonic": 1040494.313763102,
+          "ttft_s": 0.13777652196586132,
+          "elapsed_s": 11.940323182032444,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy some of the most dynamic, economically vital, yet environmentally vulnerable spaces on Earth. **Coastal City Number 0** stands as a representative archetype of this urban typology: a city where maritime trade, tourism, and dense residential life intersect with unique geographical constraints. Situated along a coastline, City Number 0 faces distinct transportation challenges. Its geography\u2014characterized by long shorelines, elevated or flat terrain, seasonal tourist surges, and vulnerable ecosystems\u2014demands public transport solutions that are not only efficient and accessible,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-1-0-0",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 206.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 207.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 2,
+      "repeat": 0,
+      "completed": "2026-10-25T16:56:51.265063+00:00",
+      "output_tokens": 256,
+      "wall_s": 12.233190146042034,
+      "wall_tps": 20.926675457818096,
+      "stream_window_s": 12.017047092085704,
+      "stream_window_tps": 21.303070383122556,
+      "median_ttft_s": 0.2507401959737763,
+      "max_ttft_s": 0.28542165795806795,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040494.327528391,
+          "ended_monotonic": 1040506.560663113,
+          "first_event_monotonic": 1040494.612950049,
+          "last_event_monotonic": 1040506.560578793,
+          "ttft_s": 0.28542165795806795,
+          "elapsed_s": 12.23313472198788,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy some of the most dynamic, economically vital, yet environmentally vulnerable spaces on Earth. **Coastal City Number 0** stands as a representative archetype of this urban typology: a city where maritime trade, tourism, and dense residential life intersect with unique geographical constraints. Situated along a coastline, City Number 0 faces distinct transportation challenges. Its geography\u2014characterized by long shorelines, elevated or flat terrain, seasonal tourist surges, and vulnerable ecosystems\u2014demands public transport solutions that are not only efficient and accessible,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-2-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040494.327472967,
+          "ended_monotonic": 1040506.469771721,
+          "first_event_monotonic": 1040494.543531701,
+          "last_event_monotonic": 1040506.469638009,
+          "ttft_s": 0.2160587339894846,
+          "elapsed_s": 12.142298754071817,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, dense commercial districts, and residential neighborhoods stretching toward the inland hinterland, the city faces a distinct set of transportation challenges. As urban density increases and the reliance on private motor vehicles grows, congestion, environmental degradation, and transit inefficiency threaten the city\u2019s sustainability. \n\nImproving public transport in Coastal City Number 1 is not merely an urban convenience; it is an economic imperative",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-2-0-1",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 207.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 209.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 3,
+      "repeat": 0,
+      "completed": "2026-10-25T16:57:03.746211+00:00",
+      "output_tokens": 384,
+      "wall_s": 12.466360194026493,
+      "wall_tps": 30.802896276332632,
+      "stream_window_s": 12.25220252503641,
+      "stream_window_tps": 31.341303672978494,
+      "median_ttft_s": 0.2812989520607516,
+      "max_ttft_s": 0.28150831104721874,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040506.575474383,
+          "ended_monotonic": 1040518.948402872,
+          "first_event_monotonic": 1040506.789514645,
+          "last_event_monotonic": 1040518.947967641,
+          "ttft_s": 0.21404026204254478,
+          "elapsed_s": 12.372928488999605,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. Defined by their proximity to the sea, they are characterized by high tourism density, seasonal population fluctuations, geographic constraints, and complex environmental vulnerabilities. **Coastal City Number 0** serves as an archetype for these challenges: a vibrant, economically dynamic metropolis whose growth is inextricably linked to its maritime identity, yet whose public transport network struggles to keep pace with modern urban density and sustainability mandates.\n\nPublic transport in Coastal City Number 0 is not merely a mechanism",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-3-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040506.575753775,
+          "ended_monotonic": 1040519.041760194,
+          "first_event_monotonic": 1040506.857052727,
+          "last_event_monotonic": 1040519.04171717,
+          "ttft_s": 0.2812989520607516,
+          "elapsed_s": 12.466006419039331,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, dense residential neighborhoods, and complex topography, the city faces unique transportation challenges. As urban density increases and the reliance on private motor vehicles threatens both environmental sustainability and road infrastructure, the imperative to overhaul and improve public transport becomes paramount. \n\nPublic transportation in Coastal City Number 1 cannot be treated as a conventional inland transit problem. It must integrate land-sea connectivity, manage fluctuating",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-3-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040506.5754,
+          "ended_monotonic": 1040519.041195699,
+          "first_event_monotonic": 1040506.856908311,
+          "last_event_monotonic": 1040519.041093156,
+          "ttft_s": 0.28150831104721874,
+          "elapsed_s": 12.465795699041337,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant urban center where economic vitality, tourism, and natural beauty intersect. Positioned along a major coastline, the city attracts millions of visitors annually while supporting a dense, growing population of residents. However, this geographic and economic profile presents distinct challenges for its transportation infrastructure. Unlike inland metropolises, CCN2 contends with seasonal population surges, dispersed development along waterfronts, geographical constraints dictated by water bodies, and the urgent need to balance environmental preservation with urban mobility. \n\n",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-3-0-2",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 209.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 212.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 4,
+      "repeat": 0,
+      "completed": "2026-10-25T16:57:16.151204+00:00",
+      "output_tokens": 512,
+      "wall_s": 12.389463001978584,
+      "wall_tps": 41.3254391992804,
+      "stream_window_s": 12.135680977953598,
+      "stream_window_tps": 42.189639042928846,
+      "median_ttft_s": 0.348162095004227,
+      "max_ttft_s": 0.34835270303301513,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040519.05732375,
+          "ended_monotonic": 1040531.352992694,
+          "first_event_monotonic": 1040519.31097867,
+          "last_event_monotonic": 1040531.352849254,
+          "ttft_s": 0.25365492003038526,
+          "elapsed_s": 12.295668944017962,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. Defined by their proximity to the sea, they are characterized by high tourism density, seasonal population fluctuations, geographic constraints, and complex environmental vulnerabilities. **Coastal City Number 0** serves as an archetype for these challenges: a vibrant, economically dynamic metropolis whose growth is inextricably linked to its maritime identity, yet whose public transport network struggles to keep pace with modern urban density and sustainability mandates.\n\nPublic transport in Coastal City Number 0 is not merely a mechanism",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-4-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040519.057445638,
+          "ended_monotonic": 1040531.446292897,
+          "first_event_monotonic": 1040519.405772756,
+          "last_event_monotonic": 1040531.446214385,
+          "ttft_s": 0.34832711797207594,
+          "elapsed_s": 12.3888472589897,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, dense residential neighborhoods, and complex topography, the city faces unique transportation challenges. As urban density increases and the reliance on private motor vehicles threatens both environmental sustainability and road infrastructure, the imperative to overhaul and improve public transport becomes paramount. \n\nPublic transportation in Coastal City Number 1 cannot be treated as a conventional inland transit problem. It must integrate land-sea connectivity, manage fluctuating",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-4-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040519.057984244,
+          "ended_monotonic": 1040531.446704672,
+          "first_event_monotonic": 1040519.405981316,
+          "last_event_monotonic": 1040531.446659648,
+          "ttft_s": 0.3479970720363781,
+          "elapsed_s": 12.388720427989028,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant urban center where economic vitality, tourism, and natural beauty intersect. Positioned along a major coastline, the city attracts millions of visitors annually while supporting a dense, growing population of residents. However, this geographic and economic profile presents distinct challenges for its transportation infrastructure. Unlike inland metropolises, CCN2 contends with seasonal population surges, dispersed development along waterfronts, geographical constraints dictated by water bodies, and the urgent need to balance environmental preservation with urban mobility. \n\n",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-4-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1040519.05724167,
+          "ended_monotonic": 1040531.445823442,
+          "first_event_monotonic": 1040519.405594373,
+          "last_event_monotonic": 1040531.445729666,
+          "ttft_s": 0.34835270303301513,
+          "elapsed_s": 12.388581771985628,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 3 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense residential pockets, the city faces a dual challenge: meeting the mobility demands of its residents while preserving its environmental and economic appeal. As urban density increases and climate variability intensifies\u2014ranging from storm surges to extreme heat\u2014the existing public transport infrastructure in Coastal City Number 3 is proving insufficient. Congestion along arterial roads, long commute times, and low transit mode share indicate",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-4-0-3",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 212.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 216.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 5,
+      "repeat": 0,
+      "completed": "2026-10-25T16:57:28.624682+00:00",
+      "output_tokens": 640,
+      "wall_s": 12.45880465907976,
+      "wall_tps": 51.36929404648616,
+      "stream_window_s": 12.212565827998333,
+      "stream_window_tps": 52.40503994113557,
+      "median_ttft_s": 0.33559289993718266,
+      "max_ttft_s": 0.33575859596021473,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040531.461607174,
+          "ended_monotonic": 1040543.919631371,
+          "first_event_monotonic": 1040531.79736577,
+          "last_event_monotonic": 1040543.919550939,
+          "ttft_s": 0.33575859596021473,
+          "elapsed_s": 12.458024197025225,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. Defined by their proximity to the sea, they are characterized by high tourism economies, seasonal population surges, complex geographic topographies, and environmental vulnerabilities. **Coastal City Number 0** serves as an archetype for these challenges: a vibrant, densely populated metropolis where the demand for efficient public transport is both critical and complicated. As urban density increases and climate change accelerates coastal erosion and flooding, the city faces a dual imperative: to enhance mobility for its residents and visitors",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-5-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040531.462239092,
+          "ended_monotonic": 1040543.920085194,
+          "first_event_monotonic": 1040531.797909033,
+          "last_event_monotonic": 1040543.919994778,
+          "ttft_s": 0.33566994103603065,
+          "elapsed_s": 12.457846102071926,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense urban core, the city faces a distinct set of transportation challenges. As urban density increases and environmental concerns mount, reliance on private motor vehicles has led to severe traffic congestion, air pollution, and an inequitable transit system. \n\nImproving public transport in Coastal City Number 1 is not merely an urban convenience; it is an economic imperative, an environmental safeguard, and",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-5-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040531.461482134,
+          "ended_monotonic": 1040543.918633342,
+          "first_event_monotonic": 1040531.796504189,
+          "last_event_monotonic": 1040543.918577262,
+          "ttft_s": 0.33502205507829785,
+          "elapsed_s": 12.4571512080729,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant, dynamic urban center where the sea meets the ambitions of modern metropolitan growth. Characterized by dense commercial districts, residential neighborhoods sprawling along the waterfront, seasonal tourism surges, and geographic constraints imposed by its coastline, the city faces a defining challenge: **how to provide efficient, equitable, and resilient public transport**. Private vehicle congestion, high carbon emissions, coastal erosion exacerbated by idling vehicles, and severe urban inequality are pressing issues that demand a fundamental reimagining of urban",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-5-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1040531.461362087,
+          "ended_monotonic": 1040543.919162076,
+          "first_event_monotonic": 1040531.796954987,
+          "last_event_monotonic": 1040543.919086909,
+          "ttft_s": 0.33559289993718266,
+          "elapsed_s": 12.457799988915212,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 3 stands at a critical juncture. As a vibrant urban center positioned along a coastline, the city faces the dual challenge of managing rapid population growth while contending with the unique geographical, environmental, and economic realities of a coastal environment. From seasonal tourism surges and port activities to coastal erosion and tidal constraints, public transport in Coastal City Number 3 cannot rely on standard metropolitan models. A poorly planned transit system exacerbates traffic congestion, increases carbon emissions, limits economic mobility, and leaves the city vulnerable to climate disruptions.",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-5-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1040531.461280535,
+          "ended_monotonic": 1040543.824462853,
+          "first_event_monotonic": 1040531.70742895,
+          "last_event_monotonic": 1040543.824297349,
+          "ttft_s": 0.24614841502625495,
+          "elapsed_s": 12.36318231804762,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 4: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 4 stands at a critical juncture. As a vibrant coastal metropolis, it faces the dual pressures of economic growth driven by tourism, port activity, and commercial development, alongside severe environmental vulnerabilities inherent to living along the coastline. Within this context, public transport serves not merely as a municipal convenience, but as the backbone of urban resilience, economic equity, and environmental sustainability. \n\nCurrently, the public transport network in Coastal City Number 4 is fragmented, underfunded, and poorly integrated. Commuters endure unreliable",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 4. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-5-0-4",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 216.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 221.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 6,
+      "repeat": 0,
+      "completed": "2026-10-25T16:57:41.152451+00:00",
+      "output_tokens": 768,
+      "wall_s": 12.511014971067198,
+      "wall_tps": 61.38590688094182,
+      "stream_window_s": 12.256129667977802,
+      "stream_window_tps": 62.6625224116706,
+      "median_ttft_s": 0.35189057752722874,
+      "max_ttft_s": 0.35229656798765063,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040543.936995083,
+          "ended_monotonic": 1040556.446089036,
+          "first_event_monotonic": 1040544.288458469,
+          "last_event_monotonic": 1040556.445982828,
+          "ttft_s": 0.351463385974057,
+          "elapsed_s": 12.509093952947296,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. Defined by their proximity to the sea, they are characterized by high tourism economies, seasonal population surges, complex geographic topographies, and environmental vulnerabilities. **Coastal City Number 0** serves as an archetype for these challenges: a vibrant, densely populated metropolis where the demand for efficient public transport is both critical and complicated. As urban density increases and climate change accelerates coastal erosion and flooding, the city faces a dual imperative: to enhance mobility for its residents and visitors",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-6-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040543.937166026,
+          "ended_monotonic": 1040556.447465768,
+          "first_event_monotonic": 1040544.289462594,
+          "last_event_monotonic": 1040556.447364456,
+          "ttft_s": 0.35229656798765063,
+          "elapsed_s": 12.510299741989002,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense urban core, the city faces a distinct set of transportation challenges. As urban density increases and environmental concerns mount, reliance on private motor vehicles has led to severe traffic congestion, air pollution, and an inequitable transit system. \n\nImproving public transport in Coastal City Number 1 is not merely an urban convenience; it is an economic imperative, an environmental safeguard, and",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-6-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040543.937229498,
+          "ended_monotonic": 1040556.352247585,
+          "first_event_monotonic": 1040544.191705187,
+          "last_event_monotonic": 1040556.352120049,
+          "ttft_s": 0.2544756889110431,
+          "elapsed_s": 12.415018086903729,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant urban center where economic vitality meets natural beauty. Situated along a major coastline, the city attracts domestic and international tourism, sustains a bustling port economy, and hosts a dense residential population. However, rapid urbanization, seasonal population surges, and geographical constraints have placed unprecedented pressure on its existing transportation infrastructure. Private vehicle reliance has led to severe congestion along arterial corridors, deteriorating air quality, and an inequitable transit experience for low-income residents.\n\nImproving public transport in CCN",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-6-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1040543.937585849,
+          "ended_monotonic": 1040556.446946169,
+          "first_event_monotonic": 1040544.289421635,
+          "last_event_monotonic": 1040556.44685265,
+          "ttft_s": 0.3518357860157266,
+          "elapsed_s": 12.5093603200512,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 3 stands at a critical juncture. As a vibrant urban center positioned along a coastline, the city faces the dual challenge of managing rapid population growth while contending with the unique geographical, environmental, and economic realities of a coastal environment. From seasonal tourism surges and port activities to coastal erosion and tidal constraints, public transport in Coastal City Number 3 cannot rely on standard metropolitan models. A poorly planned transit system exacerbates traffic congestion, increases carbon emissions, limits economic mobility, and leaves the city vulnerable to climate disruptions.",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-6-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1040543.937894072,
+          "ended_monotonic": 1040556.447933446,
+          "first_event_monotonic": 1040544.289958481,
+          "last_event_monotonic": 1040556.447834855,
+          "ttft_s": 0.3520644089439884,
+          "elapsed_s": 12.510039373999462,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 4: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 4 (CCN4) stands as a vibrant urban center where economic vitality meets natural beauty. Situated along a major coastline, the city has experienced rapid population growth, seasonal tourism influxes, and expanding commercial districts. However, this dynamic has placed immense pressure on the city\u2019s transportation infrastructure. Private vehicle reliance has led to severe traffic congestion, environmental degradation, and inequitable mobility. To build a sustainable, resilient, and inclusive city, CCN4 must fundamentally transform its public transport system.\n\nImproving public",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 4. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-6-0-4",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1040543.936918475,
+          "ended_monotonic": 1040556.446598938,
+          "first_event_monotonic": 1040544.288863844,
+          "last_event_monotonic": 1040556.44651921,
+          "ttft_s": 0.35194536903873086,
+          "elapsed_s": 12.509680463001132,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 5: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 5 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense residential pockets, the city faces a distinct set of transportation challenges. As urban populations swell and the reliance on private motor vehicles increases, congestion, environmental degradation, and transit inequity become pressing concerns. Improving public transport in Coastal City Number 5 is not merely an urban planning exercise; it is a socioeconomic necessity that directly impacts the city\u2019s sustainability, economic competitiveness, and quality",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 5. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-6-0-5",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 221.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 227.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 7,
+      "repeat": 0,
+      "completed": "2026-10-25T16:57:53.757093+00:00",
+      "output_tokens": 896,
+      "wall_s": 12.588658337015659,
+      "wall_tps": 71.17517816536524,
+      "stream_window_s": 12.29725346795749,
+      "stream_window_tps": 72.86179815148765,
+      "median_ttft_s": 0.40225747192744166,
+      "max_ttft_s": 0.403773820027709,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040556.463958202,
+          "ended_monotonic": 1040569.050247825,
+          "first_event_monotonic": 1040556.866042426,
+          "last_event_monotonic": 1040569.050203666,
+          "ttft_s": 0.40208422392606735,
+          "elapsed_s": 12.58628962293733,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. Defined by their proximity to the sea, they are characterized by high tourism economies, seasonal population surges, complex geographic topographies, and environmental vulnerabilities. **Coastal City Number 0** serves as an archetype for these challenges: a vibrant, densely populated metropolis where the demand for efficient public transport is both critical and complicated. As urban density increases and climate change accelerates coastal erosion and flooding, the city faces a dual imperative: to enhance mobility for its residents and visitors",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040556.463670347,
+          "ended_monotonic": 1040569.049726211,
+          "first_event_monotonic": 1040556.865608284,
+          "last_event_monotonic": 1040569.049668115,
+          "ttft_s": 0.40193793701473624,
+          "elapsed_s": 12.586055863997899,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense urban core, the city faces a distinct set of transportation challenges. As urban density increases and environmental concerns mount, reliance on private motor vehicles has led to severe traffic congestion, air pollution, and an inequitable transit system. \n\nImproving public transport in Coastal City Number 1 is not merely an urban convenience; it is an economic imperative, an environmental safeguard, and",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040556.464256345,
+          "ended_monotonic": 1040569.051833373,
+          "first_event_monotonic": 1040556.867207047,
+          "last_event_monotonic": 1040569.051713645,
+          "ttft_s": 0.402950702002272,
+          "elapsed_s": 12.587577028083615,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant, dynamic urban center where the sea meets the ambitions of modern metropolitan growth. Characterized by dense commercial districts, residential neighborhoods sprawling along the waterfront, seasonal tourism surges, and geographic constraints imposed by its coastline, the city faces a defining challenge: **how to provide efficient, equitable, and resilient public transport**. Private vehicle congestion, high carbon emissions, coastal erosion exacerbated by idling vehicles, and severe urban inequality are pressing issues that demand a fundamental reimagining of mobility",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1040556.463847242,
+          "ended_monotonic": 1040569.052277372,
+          "first_event_monotonic": 1040556.867621062,
+          "last_event_monotonic": 1040569.052184508,
+          "ttft_s": 0.403773820027709,
+          "elapsed_s": 12.588430130039342,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 3 stands at a critical juncture. As a vibrant urban center positioned along a coastline, the city faces the dual challenge of managing rapid population growth while contending with the unique geographical, environmental, and economic realities of a coastal environment. From seasonal tourism surges and port activities to coastal erosion and tidal constraints, public transport in Coastal City Number 3 cannot rely on standard metropolitan models. A poorly planned transit system exacerbates traffic congestion, increases carbon emissions, limits economic mobility, and leaves the city vulnerable to climate disruptions.",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1040556.463728555,
+          "ended_monotonic": 1040569.051310126,
+          "first_event_monotonic": 1040556.866789144,
+          "last_event_monotonic": 1040569.051219711,
+          "ttft_s": 0.40306058898568153,
+          "elapsed_s": 12.587581570958719,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 4: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 4 (CCN4) stands as a vibrant urban center where economic vitality meets natural beauty. Situated along a major coastline, the city has experienced rapid population growth, seasonal tourism influxes, and expanding commercial districts. However, this dynamic has placed immense pressure on the city\u2019s transportation infrastructure. Private vehicle reliance has led to severe traffic congestion, environmental degradation, and inequitable mobility. To build a sustainable, resilient, and inclusive city, CCN4 must fundamentally transform its public transport system.\n\nImproving public",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 4. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-4",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1040556.464069674,
+          "ended_monotonic": 1040569.050655376,
+          "first_event_monotonic": 1040556.866327146,
+          "last_event_monotonic": 1040569.050550049,
+          "ttft_s": 0.40225747192744166,
+          "elapsed_s": 12.586585702025332,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 5: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 5 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense residential pockets, the city faces a distinct set of transportation challenges. As urban populations swell and the reliance on private motor vehicles increases, congestion, environmental degradation, and transit inequity become pressing concerns. Improving public transport in Coastal City Number 5 is not merely an urban planning exercise; it is a socioeconomic necessity that directly impacts the city\u2019s sustainability, economic competitiveness, and quality",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 5. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-5",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 6,
+          "started_monotonic": 1040556.463619035,
+          "ended_monotonic": 1040568.954629451,
+          "first_event_monotonic": 1040556.75493104,
+          "last_event_monotonic": 1040568.954500011,
+          "ttft_s": 0.29131200502160937,
+          "elapsed_s": 12.491010416066274,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 6: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in global urban development. They serve as economic engines, cultural gateways, and gateways to maritime trade, tourism, and environmental conservation. **Coastal City Number 6** exemplifies the classic challenges of modern coastal urban centers: rapid population growth, seasonal tourism surges, geographical constraints imposed by water bodies, coastal erosion, environmental sensitivity, and the urgent need to reduce carbon emissions. Public transport in such a city cannot merely be an auxiliary service; it is the lifeblood of urban mobility, economic resilience,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 6. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-7-0-6",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 227.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 234.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 8,
+      "repeat": 0,
+      "completed": "2026-10-25T16:58:06.440891+00:00",
+      "output_tokens": 1024,
+      "wall_s": 12.667094415985048,
+      "wall_tps": 80.83937534307621,
+      "stream_window_s": 12.360316228005104,
+      "stream_window_tps": 82.84577684832168,
+      "median_ttft_s": 0.4296428069937974,
+      "max_ttft_s": 0.4322836799547076,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040569.069246109,
+          "ended_monotonic": 1040581.733780964,
+          "first_event_monotonic": 1040569.498647748,
+          "last_event_monotonic": 1040581.733736404,
+          "ttft_s": 0.42940163903404027,
+          "elapsed_s": 12.664534855051897,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. Defined by their proximity to the sea, they are characterized by high tourism economies, seasonal population surges, complex geographic topographies, and environmental vulnerabilities. **Coastal City Number 0** serves as an archetype for these challenges: a vibrant, densely populated metropolis where the demand for efficient public transport is both critical and complicated. As urban density increases and climate change accelerates coastal erosion and flooding, the city faces a dual imperative: to enhance mobility for its residents and visitors",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040569.07008801,
+          "ended_monotonic": 1040581.736272189,
+          "first_event_monotonic": 1040569.502046331,
+          "last_event_monotonic": 1040581.736161133,
+          "ttft_s": 0.4319583208998665,
+          "elapsed_s": 12.666184178902768,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense urban core, the city faces a distinct set of transportation challenges. As urban density increases and environmental concerns mount, reliance on private motor vehicles has led to severe traffic congestion, air pollution, and an inequitable transit system. \n\nImproving public transport in Coastal City Number 1 is not merely an urban convenience; it is an economic imperative, an environmental safeguard, and",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040569.069692795,
+          "ended_monotonic": 1040581.734819169,
+          "first_event_monotonic": 1040569.499400786,
+          "last_event_monotonic": 1040581.734715425,
+          "ttft_s": 0.4297079909592867,
+          "elapsed_s": 12.66512637399137,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 (CCN2) stands as a vibrant, dynamic urban center where the sea meets the ambitions of modern metropolitan growth. Characterized by dense commercial districts, residential neighborhoods sprawling along the waterfront, seasonal tourism surges, and geographic constraints imposed by its coastline, the city faces a defining challenge: **how to provide efficient, equitable, and resilient public transport**. Private vehicle congestion, high carbon emissions, coastal erosion exacerbated by idling vehicles, and severe urban inequality are pressing issues that demand a fundamental reimagining of mobility",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1040569.069412844,
+          "ended_monotonic": 1040581.735830366,
+          "first_event_monotonic": 1040569.501696524,
+          "last_event_monotonic": 1040581.735706719,
+          "ttft_s": 0.4322836799547076,
+          "elapsed_s": 12.666417522006668,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 3 stands at a critical juncture. As a vibrant urban center positioned along a coastline, the city faces the dual challenge of managing rapid population growth while contending with the unique geographical, environmental, and economic realities of a coastal environment. From seasonal tourism surges and port activities to coastal erosion and tidal constraints, public transport in Coastal City Number 3 cannot rely on standard metropolitan models. A poorly planned transit system exacerbates traffic congestion, increases carbon emissions, limits economic mobility, and leaves the city vulnerable to climate disruptions.",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1040569.06953438,
+          "ended_monotonic": 1040581.734253427,
+          "first_event_monotonic": 1040569.499112003,
+          "last_event_monotonic": 1040581.734142371,
+          "ttft_s": 0.42957762302830815,
+          "elapsed_s": 12.664719047024846,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 4: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 4 (CCN4) stands as a vibrant urban center where economic vitality meets natural beauty. Situated along a major coastline, the city has experienced rapid population growth, seasonal tourism influxes, and expanding commercial districts. However, this dynamic has placed immense pressure on the city\u2019s transportation infrastructure. Private vehicle reliance has led to severe traffic congestion, environmental degradation, and inequitable mobility. To build a sustainable, resilient, and inclusive city, CCN4 must fundamentally transform its public transport system.\n\nImproving public",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 4. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-4",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1040569.069335644,
+          "ended_monotonic": 1040581.63759251,
+          "first_event_monotonic": 1040569.375844905,
+          "last_event_monotonic": 1040581.637469551,
+          "ttft_s": 0.3065092610195279,
+          "elapsed_s": 12.568256865954027,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 5: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in global urban development. As **Coastal City Number 5** exemplifies, these urban environments are defined by geographical constraints, high tourism demand, seasonal population fluctuations, and the delicate balance between environmental preservation and economic vitality. For City Number 5, public transport is not merely a municipal convenience; it is the lifeblood of the local economy, the primary defense against traffic congestion, and a critical tool for climate resilience. \n\nCurrently, like many coastal metropolises, City Number 5",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 5. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-5",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 6,
+          "started_monotonic": 1040569.069989899,
+          "ended_monotonic": 1040581.735329136,
+          "first_event_monotonic": 1040569.501475372,
+          "last_event_monotonic": 1040581.73528392,
+          "ttft_s": 0.43148547294549644,
+          "elapsed_s": 12.665339236962609,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 6: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 6 stands at a critical juncture. As a vibrant urban center positioned along a coastline, the city faces the dual challenges of managing rapid population growth and addressing the unique geographical, environmental, and economic realities of a maritime environment. Public transport is the lifeblood of any city, but in a coastal setting, its design and execution must balance urban density, tourist influx, environmental preservation, and geographic constraints such as water bodies, steep gradients, and seasonal weather shifts. \n\nImproving public transport in Coastal City Number ",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 6. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-6",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 7,
+          "started_monotonic": 1040569.069177773,
+          "ended_monotonic": 1040581.733255925,
+          "first_event_monotonic": 1040569.498158934,
+          "last_event_monotonic": 1040581.733155622,
+          "ttft_s": 0.4289811609778553,
+          "elapsed_s": 12.66407815204002,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 7: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 7 stands as a vibrant, dynamic urban center where the natural beauty of the sea meets the demands of modern metropolitan life. With its dense population, seasonal tourism influx, commercial port activity, and geographic spread along the coastline, the city faces unique challenges in providing efficient, equitable, and resilient public transport. Public transport is not merely a convenience in Coastal City Number 7; it is the backbone of economic vitality, environmental sustainability, and social inclusion. However, the existing system\u2014often characterized by fragmented services,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 7. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-8-0-7",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 234.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 242.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    },
+    {
+      "workload": "prose",
+      "concurrency": 12,
+      "repeat": 0,
+      "completed": "2026-10-25T16:58:19.679570+00:00",
+      "output_tokens": 1536,
+      "wall_s": 13.220518299029209,
+      "wall_tps": 116.18303951916843,
+      "stream_window_s": 12.830292819999158,
+      "stream_window_tps": 119.71667533618307,
+      "median_ttft_s": 0.5853540984680876,
+      "max_ttft_s": 0.5876715239137411,
+      "requests": [
+        {
+          "index": 0,
+          "started_monotonic": 1040581.754142492,
+          "ended_monotonic": 1040594.969592341,
+          "first_event_monotonic": 1040582.336867517,
+          "last_event_monotonic": 1040594.969501541,
+          "ttft_s": 0.5827250250149518,
+          "elapsed_s": 13.215449849027209,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 0: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal cities occupy some of the most dynamic, economically vital, and ecologically sensitive environments on Earth. **Coastal City Number 0** stands as a representative archetype of this urban typology: a city where maritime commerce, tourism, residential growth, and natural ecosystems intersect. Yet, this vibrancy is accompanied by acute structural challenges. Geographic constraints\u2014such as limited land, steep shorelines, seasonal tourist surges, and vulnerability to climate change\u2014place extraordinary demands on urban mobility. Private vehicle dependence in such environments often leads to",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 0. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-0",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 1,
+          "started_monotonic": 1040581.754858586,
+          "ended_monotonic": 1040594.971197648,
+          "first_event_monotonic": 1040582.339377894,
+          "last_event_monotonic": 1040594.971107329,
+          "ttft_s": 0.5845193079439923,
+          "elapsed_s": 13.216339061968029,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 1: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 1 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, dense residential pockets, and sprawling suburban developments, the city faces a defining challenge: **how to provide efficient, equitable, and resilient public transport**. Unlike inland metropolises, a coastal city contends with unique logistical hurdles\u2014including geographic fragmentation caused by waterways, high tourist volumes, extreme weather vulnerability, and the spatial constraints of historic urban cores. \n\nInvesting in public transport is",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 1. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-1",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 2,
+          "started_monotonic": 1040581.754693322,
+          "ended_monotonic": 1040594.972103902,
+          "first_event_monotonic": 1040582.340129652,
+          "last_event_monotonic": 1040594.971990094,
+          "ttft_s": 0.5854363299440593,
+          "elapsed_s": 13.21741058002226,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 2: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 2 stands as a vibrant urban center where economic vitality, tourism, and natural beauty intersect. However, rapid population growth, seasonal influxes of visitors, and the geographical constraints inherent to coastal environments have placed unprecedented pressure on its transportation infrastructure. Public transport is the lifeblood of any city; when it functions efficiently, it reduces traffic congestion, lowers carbon emissions, enhances social equity, and supports economic productivity. Conversely, when public transport is neglected, the city suffers from gridlock, environmental degradation, and diminished quality of",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 2. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-2",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 3,
+          "started_monotonic": 1040581.754442331,
+          "ended_monotonic": 1040594.972602428,
+          "first_event_monotonic": 1040582.340399524,
+          "last_event_monotonic": 1040594.972491517,
+          "ttft_s": 0.5859571929322556,
+          "elapsed_s": 13.21816009702161,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 3: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in urban geography. Defined by their proximity to the sea, they are characterized by high tourism density, seasonal population surges, dispersed geographic footprints along coastlines, and complex environmental constraints. **Coastal City Number 3 (CCN3)** exemplifies these challenges: a vibrant metropolitan area where residents and visitors alike face traffic congestion, unreliable transit, and spatial inequities. As CCN3 continues to expand, the imperative to modernize and expand its public transport network has moved from a policy aspiration to an urgent operational necessity",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 3. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-3",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 4,
+          "started_monotonic": 1040581.754269995,
+          "ended_monotonic": 1040594.974612151,
+          "first_event_monotonic": 1040582.341941519,
+          "last_event_monotonic": 1040594.974504487,
+          "ttft_s": 0.5876715239137411,
+          "elapsed_s": 13.220342156011611,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 4: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 4 (CCN4) stands as a vibrant, dynamic urban center where economic vitality meets maritime geography. Defined by its waterfront promenades, seasonal tourism influx, commercial port operations, and dense residential neighborhoods, the city faces a dual challenge: managing rapid population growth while preserving its coastal character. At the core of CCN4\u2019s urban challenges lies an inadequate public transport network. Currently, the city suffers from severe traffic congestion along arterial corridors, high greenhouse gas emissions, low transit mode share (under 20",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 4. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-4",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 5,
+          "started_monotonic": 1040581.755161673,
+          "ended_monotonic": 1040594.973604266,
+          "first_event_monotonic": 1040582.341157905,
+          "last_event_monotonic": 1040594.97349033,
+          "ttft_s": 0.585996231995523,
+          "elapsed_s": 13.218442593002692,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 5: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in global urban development. Defined by their proximity to the sea, they are characterized by high tourism density, seasonal population fluctuations, geographic constraints, and complex multimodal transport demands. **Coastal City Number 5 (CC5)** exemplifies these challenges: a vibrant, economically dynamic metropolis whose growth has outpaced its legacy transport infrastructure. Today, residents and visitors in CC5 face severe traffic congestion, unreliable bus services, disconnected rail networks, and significant accessibility barriers.\n\nImproving public transport in CC5",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 5. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-5",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 6,
+          "started_monotonic": 1040581.75614079,
+          "ended_monotonic": 1040594.974118984,
+          "first_event_monotonic": 1040582.34161448,
+          "last_event_monotonic": 1040594.973991561,
+          "ttft_s": 0.5854736900655553,
+          "elapsed_s": 13.217978194006719,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 6: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in the global urban hierarchy. They are economic engines, cultural magnets, and gateways to international trade and tourism. **Coastal City Number 6 (CCN6)** exemplifies this archetype: a vibrant, densely populated metropolis situated along a major bay and strait. Its geography, however, presents distinct logistical challenges. The city\u2019s layout is shaped by water bodies, historic port infrastructure, seasonal tourism surges, and geographical fragmentation. For decades, CCN6 has relied on private vehicle ownership and fragmented,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 6. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-6",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 7,
+          "started_monotonic": 1040581.754189403,
+          "ended_monotonic": 1040594.970077619,
+          "first_event_monotonic": 1040582.337341116,
+          "last_event_monotonic": 1040594.969971028,
+          "ttft_s": 0.583151713013649,
+          "elapsed_s": 13.215888215927407,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 7: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 7 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense residential pockets, the city faces a dual challenge: managing rapid population growth while preserving its maritime character. Public transportation serves as the lifeblood of any city, but in a coastal environment, it takes on unique significance. The city\u2019s reliance on private vehicles has led to severe traffic congestion along arterial corridors, elevated carbon emissions, and an inequitable transit experience for vulnerable populations",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 7. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-7",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 8,
+          "started_monotonic": 1040581.754362139,
+          "ended_monotonic": 1040594.971566399,
+          "first_event_monotonic": 1040582.339634006,
+          "last_event_monotonic": 1040594.971458272,
+          "ttft_s": 0.585271866992116,
+          "elapsed_s": 13.217204259941354,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 8: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 8 stands at a critical juncture. As a vibrant urban center positioned along a major maritime corridor, the city faces the dual challenge of managing rapid population growth while preserving its environmental and economic vitality. The pressures of tourism, commercial expansion, and residential densification have placed unprecedented strain on its existing transportation infrastructure. Private vehicle reliance has led to chronic traffic congestion, elevated carbon emissions, and inequitable mobility for vulnerable demographics. \n\nImproving public transport in Coastal City Number 8 is not merely an urban convenience; it",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 8. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-8",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 9,
+          "started_monotonic": 1040581.754801978,
+          "ended_monotonic": 1040594.973113643,
+          "first_event_monotonic": 1040582.340870786,
+          "last_event_monotonic": 1040594.972985883,
+          "ttft_s": 0.5860688079847023,
+          "elapsed_s": 13.2183116649976,
+          "usage": {
+            "prompt_tokens": 73,
+            "total_tokens": 201,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 9: A Comprehensive Strategy\n\n## Introduction\n\nCoastal City Number 9 stands as a vibrant, dynamic urban center where the sea meets modern metropolitan life. With its scenic waterfronts, dense commercial districts, residential neighborhoods stretching inland, and seasonal tourism influx, the city faces the dual challenge of managing rapid economic growth while maintaining environmental integrity and urban livability. At the heart of this challenge lies the public transportation network. As a coastal city, its geographical layout\u2014characterized by flat terrain near the water, coastal roads prone to flooding, and spatial constraints\u2014demands innovative, resilient,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 9. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-9",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 10,
+          "started_monotonic": 1040581.754555386,
+          "ended_monotonic": 1040594.970704306,
+          "first_event_monotonic": 1040582.337580139,
+          "last_event_monotonic": 1040594.97062997,
+          "ttft_s": 0.5830247530248016,
+          "elapsed_s": 13.216148920007981,
+          "usage": {
+            "prompt_tokens": 74,
+            "total_tokens": 202,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 10: A Comprehensive Strategy\n\n## Introduction\n\nCoastal cities occupy a unique position in urban geography. They are economic engines, cultural hubs, and gateways to global trade, yet they face distinct infrastructural challenges. **Coastal City Number 10 (CCN10)** exemplifies this paradox: rapid population growth, seasonal tourism surges, geographic constraints imposed by water bodies, and the vulnerability of low-lying infrastructure to climate change. As CCN10 continues to expand, its reliance on private vehicles has led to severe traffic congestion, environmental degradation, and inequitable mobility.",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 10. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-10",
+            "ignore_eos": true
+          }
+        },
+        {
+          "index": 11,
+          "started_monotonic": 1040581.754093852,
+          "ended_monotonic": 1040594.871669507,
+          "first_event_monotonic": 1040582.144211667,
+          "last_event_monotonic": 1040594.8714937,
+          "ttft_s": 0.3901178149972111,
+          "elapsed_s": 13.117575654992834,
+          "usage": {
+            "prompt_tokens": 74,
+            "total_tokens": 202,
+            "completion_tokens": 128,
+            "prompt_tokens_details": {
+              "cached_tokens": 0,
+              "created_cache_tokens": 64
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 0
+            }
+          },
+          "finish_reason": "length",
+          "structured_semantics_passed": null,
+          "content": "# Improving Public Transport in Coastal City Number 11: A Comprehensive Urban Strategy\n\n## Introduction\n\nCoastal City Number 11 stands as a vibrant, dynamic urban center where economic vitality meets natural beauty. Defined by its waterfront geography, seasonal tourism influx, and dense residential populations, the city faces a dual challenge: managing the high mobility demands of its residents and visitors while preserving its fragile coastal environment. Public transportation serves as the backbone of urban sustainability, economic productivity, and social equity. However, in City Number 11, private vehicle reliance has led to severe traffic congestion along the coastal corridor, elevated carbon emissions,",
+          "reasoning": "",
+          "event_count": 128,
+          "request_body": {
+            "model": "Nanbeige4.3-33B",
+            "messages": [
+              {
+                "role": "user",
+                "content": "Write a detailed essay about improving public transport in coastal city number 11. Discuss budgets, buses, trains, accessibility and practical examples. Continue for at least 1000 words."
+              }
+            ],
+            "max_tokens": 128,
+            "temperature": 0,
+            "top_p": 1,
+            "seed": 42,
+            "stream": true,
+            "stream_options": {
+              "include_usage": true
+            },
+            "chat_template_kwargs": {
+              "enable_thinking": false
+            },
+            "cache_salt": "nbg-matrix-v1-1831540609294d21b51d9c3d680b9d56-prose-12-0-11",
+            "ignore_eos": true
+          }
+        }
+      ],
+      "engine_counters_before": {
+        "completed": 242.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "engine_counters_after": {
+        "completed": 254.0,
+        "running": 0.0,
+        "waiting": 0.0
+      },
+      "isolated_counter_check": true
+    }
+  ],
+  "completed": "2026-10-25T16:58:19.687548+00:00"
+}

@@ -1,0 +1,17 @@
+{
+  "gpu": "NVIDIA GB10, [N/A], 580.142",
+  "platform": "single NVIDIA GB10, aarch64, 128 GB unified system memory",
+  "measured_date_utc": "2026-10-25",
+  "second_gb10_used_for_dflash2_training": true,
+  "gpu_clock_cap_mhz": 2000,
+  "observed_sm_clock_mhz": 1989,
+  "cpu_governor": "performance",
+  "host_clock_configuration_changed": false,
+  "worker_gpu": "NVIDIA GB10",
+  "worker_driver": "580.173.02",
+  "worker_clock_policy_changed": false,
+  "primary_throughput_measured_on_head": true,
+  "worker_used_for_training_and_independent_validation": true,
+  "serving_topology": "One GB10 per instance; no distributed serving",
+  "worker_sm_clock_observed_under_full_context_mhz": 1989
+}

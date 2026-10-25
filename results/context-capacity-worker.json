@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "note": "Probe cold context capacity; this does not measure long-context accuracy.",
+  "cases": [
+    {
+      "requested_prompt_tokens": 16384,
+      "content": "READY",
+      "usage": {
+        "prompt_tokens": 16384,
+        "total_tokens": 16386,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ttft_s": 17.84512327820994,
+      "elapsed_s": 18.07590759312734,
+      "passed": true
+    },
+    {
+      "requested_prompt_tokens": 65536,
+      "content": "READY",
+      "usage": {
+        "prompt_tokens": 65536,
+        "total_tokens": 65538,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ttft_s": 105.98696992406622,
+      "elapsed_s": 106.47914640814997,
+      "passed": true
+    },
+    {
+      "requested_prompt_tokens": 262128,
+      "content": "READY",
+      "usage": {
+        "prompt_tokens": 262128,
+        "total_tokens": 262130,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ttft_s": 943.4522401220165,
+      "elapsed_s": 945.0064735009801,
+      "passed": true
+    }
+  ],
+  "node": "worker GB10, one GPU",
+  "runtime_recipe": "flash-prefill-v3",
+  "draft_window_enabled": true
+}

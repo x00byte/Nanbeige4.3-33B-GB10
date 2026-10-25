@@ -1,0 +1,122 @@
+{
+  "source_repo": "https://github.com/vllm-project/speculators",
+  "source_commit": "21192d6ff51bb2aaa2ab0aa1d72e6f0b8f6a7d84",
+  "architecture": {
+    "architectures": [
+      "DFlash2DraftModel"
+    ],
+    "auto_map": {
+      "": "config.DFlash2SpeculatorConfig"
+    },
+    "aux_hidden_state_layer_ids": [
+      2,
+      26,
+      49
+    ],
+    "block_size": 8,
+    "conv_group_size": 16,
+    "conv_kernel_size": 2,
+    "draft_vocab_size": 166912,
+    "dtype": "bfloat16",
+    "mask_token_id": 166102,
+    "sample_from_anchor": false,
+    "selector_rank": 256,
+    "selector_top_k": 16,
+    "sliding_window_non_causal": true,
+    "speculators_config": {
+      "algorithm": "dflash2",
+      "default_proposal_method": "greedy",
+      "proposal_methods": [
+        {
+          "accept_tolerance": 0.0,
+          "proposal_type": "greedy",
+          "speculative_tokens": 7,
+          "verifier_accept_k": 1
+        }
+      ],
+      "verifier": {
+        "architectures": [
+          "LlamaForCausalLM"
+        ],
+        "name_or_path": "/model"
+      }
+    },
+    "speculators_model_type": "dflash2",
+    "speculators_version": "0.9.0a0",
+    "target_hidden_size": null,
+    "tie_word_embeddings": false,
+    "transformer_layer_config": {
+      "attention_bias": false,
+      "attention_dropout": 0.0,
+      "bos_token_id": 166100,
+      "eos_token_id": 166101,
+      "head_dim": 128,
+      "hidden_act": "silu",
+      "hidden_size": 7168,
+      "initializer_range": 0.02,
+      "intermediate_size": 8192,
+      "layer_types": [
+        "sliding_attention",
+        "sliding_attention"
+      ],
+      "max_position_embeddings": 524288,
+      "max_window_layers": 2,
+      "model_type": "qwen3",
+      "num_attention_heads": 16,
+      "num_hidden_layers": 2,
+      "num_key_value_heads": 4,
+      "pad_token_id": null,
+      "rms_norm_eps": 1e-05,
+      "rope_parameters": {
+        "rope_theta": 120000000,
+        "rope_type": "default"
+      },
+      "sliding_window": 2048,
+      "tie_word_embeddings": false,
+      "use_cache": true,
+      "use_sliding_window": true,
+      "vocab_size": 166912
+    },
+    "transformers_version": "5.19.0"
+  },
+  "selected_checkpoint": {
+    "epoch": "14",
+    "source_revision": "21192d6ff51bb2aaa2ab0aa1d72e6f0b8f6a7d84",
+    "mask_token_id": 166102
+  },
+  "training_state": {
+    "epoch": 14,
+    "local_step": 0,
+    "global_step": 513
+  },
+  "export_adaptations": {
+    "training_max_seq_len": 1024,
+    "serving_sliding_window": 2048,
+    "use_sliding_window": true,
+    "weight_payload_changed": false,
+    "reason": "Qwen3Config clears sliding_window unless use_sliding_window is set. Every training sequence fits inside the explicit 2048-token serving window."
+  },
+  "internal_validation": {
+    "loss_epoch": 1.337152862548828,
+    "accept_rate_epoch": 0.44122344970703126,
+    "accept_len_epoch": 2.93937404800511,
+    "full_acc_epoch": 0.5454545454545454,
+    "position_1_acc_epoch": 0.761006289308176,
+    "position_2_acc_epoch": 0.7088607594936708,
+    "position_3_acc_epoch": 0.5886075949367089,
+    "position_4_acc_epoch": 0.5732484076433121,
+    "position_5_acc_epoch": 0.40764331210191085,
+    "position_6_acc_epoch": 0.4358974358974359,
+    "position_7_acc_epoch": 0.33548387096774196,
+    "eal_epoch": 4.584905660377359,
+    "unary_loss_epoch": 0.8186582565307617,
+    "selector_loss_epoch": 0.5184945583343505,
+    "unary_candidate_recall_at_16_epoch": 0.92,
+    "unary_candidate_target_mass_at_16_epoch": 0.9731655051491478,
+    "teacher_forced_selector_acc_epoch": 0.8152173913043478,
+    "unary_top_16_oracle_accepted_length_epoch": 6.893081761006289
+  },
+  "validation_limitation": "Unshuffled small 90/10 dataset split leaves JSON-only validation; internal metrics are not representative of code/prose or serving throughput.",
+  "benchmarks": "nvfp4-dflash2-pilot7.json",
+  "default": false
+}

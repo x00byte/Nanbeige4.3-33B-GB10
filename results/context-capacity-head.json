@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "note": "Probe cold context capacity; this does not measure long-context accuracy.",
+  "cases": [
+    {
+      "requested_prompt_tokens": 16384,
+      "content": "READY",
+      "usage": {
+        "prompt_tokens": 16384,
+        "total_tokens": 16386,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ttft_s": 18.102434633066878,
+      "elapsed_s": 18.360255112173036,
+      "passed": true
+    },
+    {
+      "requested_prompt_tokens": 65536,
+      "content": "READY",
+      "usage": {
+        "prompt_tokens": 65536,
+        "total_tokens": 65538,
+        "completion_tokens": 2,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "ttft_s": 107.02450537402183,
+      "elapsed_s": 107.55363960308023,
+      "passed": true
+    }
+  ],
+  "node": "head GB10, one GPU",
+  "runtime_recipe": "flash-prefill-v3",
+  "draft_window_enabled": true
+}

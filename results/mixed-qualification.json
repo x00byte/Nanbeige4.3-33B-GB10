@@ -1,0 +1,278 @@
+{
+  "passed": true,
+  "concurrency": 12,
+  "long_prefix": false,
+  "note": "Validate mixed arithmetic, reasoning, tools, and JSON across 12 concurrent streams.",
+  "requests": [
+    {
+      "index": 0,
+      "kind": "arithmetic",
+      "content": "63",
+      "reasoning": "",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 48,
+        "total_tokens": 51,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 1.8194136321544647,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "kind": "reasoning",
+      "content": "\n\n66",
+      "reasoning": "We need answer simple arithmetic. Need final integer. 22*3=66.\n",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 44,
+        "total_tokens": 70,
+        "completion_tokens": 26,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20
+        }
+      },
+      "elapsed_s": 4.10896369908005,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "kind": "tools",
+      "content": "",
+      "reasoning": "",
+      "tools": {
+        "0": {
+          "name": "weather",
+          "arguments": "{\"city\": \"Paris\"}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 300,
+        "total_tokens": 326,
+        "completion_tokens": 26,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 288
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 2.833352940157056,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "kind": "structured",
+      "content": "{\n  \"answer\": 72\n}",
+      "reasoning": "",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 56,
+        "total_tokens": 68,
+        "completion_tokens": 12,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 2.330543115036562,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "kind": "arithmetic",
+      "content": "75",
+      "reasoning": "",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 48,
+        "total_tokens": 51,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 1.8190433140844107,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "kind": "reasoning",
+      "content": "\n\n78",
+      "reasoning": "We need answer simple arithmetic. Need final integer. 26*3=78.\n",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 44,
+        "total_tokens": 70,
+        "completion_tokens": 26,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 20
+        }
+      },
+      "elapsed_s": 4.108433668036014,
+      "passed": true
+    },
+    {
+      "index": 6,
+      "kind": "tools",
+      "content": "",
+      "reasoning": "",
+      "tools": {
+        "0": {
+          "name": "weather",
+          "arguments": "{\"city\": \"Paris\"}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 300,
+        "total_tokens": 326,
+        "completion_tokens": 26,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 288
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 2.8310745977796614,
+      "passed": true
+    },
+    {
+      "index": 7,
+      "kind": "structured",
+      "content": "{\n  \"answer\": 84\n}",
+      "reasoning": "",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 56,
+        "total_tokens": 68,
+        "completion_tokens": 12,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 2.3311388241127133,
+      "passed": true
+    },
+    {
+      "index": 8,
+      "kind": "arithmetic",
+      "content": "87",
+      "reasoning": "",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 48,
+        "total_tokens": 51,
+        "completion_tokens": 3,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 1.8175675759557635,
+      "passed": true
+    },
+    {
+      "index": 9,
+      "kind": "reasoning",
+      "content": "\n\n90",
+      "reasoning": "We need answer user's simple arithmetic: Calculate 30 times 3. Reply with integer. Need final only integer likely 90. Ensure no extra.\n",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 44,
+        "total_tokens": 85,
+        "completion_tokens": 41,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 35
+        }
+      },
+      "elapsed_s": 5.052009341074154,
+      "passed": true
+    },
+    {
+      "index": 10,
+      "kind": "tools",
+      "content": "",
+      "reasoning": "",
+      "tools": {
+        "0": {
+          "name": "weather",
+          "arguments": "{\"city\": \"Paris\"}"
+        }
+      },
+      "usage": {
+        "prompt_tokens": 300,
+        "total_tokens": 326,
+        "completion_tokens": 26,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 288
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 2.8326499508693814,
+      "passed": true
+    },
+    {
+      "index": 11,
+      "kind": "structured",
+      "content": "{\n  \"answer\": 96\n}",
+      "reasoning": "",
+      "tools": {},
+      "usage": {
+        "prompt_tokens": 56,
+        "total_tokens": 68,
+        "completion_tokens": 12,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "created_cache_tokens": 32
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0
+        }
+      },
+      "elapsed_s": 2.3308337859343737,
+      "passed": true
+    }
+  ],
+  "node": "head GB10, one GPU",
+  "runtime_recipe": "flash-prefill-v3",
+  "draft_window_enabled": true
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "runtime_recipe": "flash-prefill-v3",
+  "draft_window_enabled": true,
+  "cold": {
+    "content": "READY",
+    "reasoning": "",
+    "tools": [],
+    "usage": {
+      "prompt_tokens": 16842,
+      "total_tokens": 16844,
+      "completion_tokens": 2,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "created_cache_tokens": 16832
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "elapsed_s": 18.855837253155187,
+    "ttft_s": 18.587226420175284,
+    "content_events": 1
+  },
+  "warm": {
+    "content": "READY",
+    "reasoning": "",
+    "tools": [],
+    "usage": {
+      "prompt_tokens": 16865,
+      "total_tokens": 16867,
+      "completion_tokens": 2,
+      "prompt_tokens_details": {
+        "cached_tokens": 16832,
+        "created_cache_tokens": 32
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "finish_reason": "stop",
+    "elapsed_s": 0.6800310909748077,
+    "ttft_s": 0.4148061000742018,
+    "content_events": 1
+  }
+}
